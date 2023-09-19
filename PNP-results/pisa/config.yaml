@@ -1,0 +1,12 @@
+device: cuda
+guidance_scale: 7.5
+image_path: data/pisa.jpg
+latents_path: latents_forward
+n_timesteps: 50
+negative_prompt: ugly, blurry, black, low res, unrealistic
+output_path: PNP-results/pisa
+pnp_attn_t: 1
+pnp_f_t: 1
+prompt: leaning tower of pisa on a field
+sd_version: '2.1'
+seed: 1

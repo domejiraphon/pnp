@@ -1,0 +1,19 @@
+# general
+seed: 1
+device: 'cuda'
+output_path: 'PNP-results/pisa'
+
+# data
+image_path: 'data/pisa.jpg'
+latents_path: 'latents_forward'
+
+# diffusion
+sd_version: '2.1'
+guidance_scale: 7.5
+n_timesteps: 50
+prompt: leaning tower of pisa on a field
+negative_prompt: ugly, blurry, black, low res, unrealistic
+
+# pnp injection thresholds, ∈ [0, 1]
+pnp_attn_t: 1
+pnp_f_t: 1
