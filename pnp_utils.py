@@ -108,10 +108,10 @@ def load_source_latents_t(t, latents_path):
     latents = torch.load(latents_t_path)
     return latents
 
-def register_attention_control_efficient(model, 
-                                        injection_schedule,
-                                        handles,
-                                        targets):
+def register_attention(model, 
+                        injection_schedule,
+                        handles,
+                        targets):
     def sa_forward(self):
         to_out = self.to_out
         if type(to_out) is torch.nn.modules.container.ModuleList:
@@ -124,11 +124,9 @@ def register_attention_control_efficient(model,
             h = self.heads
 
             is_cross = encoder_hidden_states is not None
-            x = x[:1]
-            print(x.shape)
+           
             y = self.head_to_batch_dim(x)
-            print(y.shape)
-            exit()
+            
             encoder_hidden_states = encoder_hidden_states if is_cross else x
             source_batch_size = int(x.shape[0] // 3)
 
@@ -162,11 +160,7 @@ def register_attention_control_efficient(model,
             v = self.head_to_batch_dim(v)
             
             sim = torch.einsum("b i d, b j d -> b i j", q, k) * self.scale
-            print(q.shape)
-            print(k.shape)
-            print(v.shape)
-            print(sim.shape)
-            exit()
+           
             if attention_mask is not None:
                 attention_mask = attention_mask.reshape(batch_size, -1)
                 max_neg_value = -torch.finfo(sim.dtype).max
@@ -178,12 +172,6 @@ def register_attention_control_efficient(model,
             #sim [batch, 256, 256]
             
             
-            # out = self.batch_to_head_dim(attn)
-            # print(v.shape)
-            # print(attn.shape)
-            # print(out.shape)
-            # print(coords.shape)
-            # exit()
             
             if self.t in self.injection_schedule:
                 
@@ -208,10 +196,7 @@ def register_attention_control_efficient(model,
                 sim[2 * B:] = deformed_sim
 
             attn = sim.softmax(dim=-1)
-            # print(attn_deformed.shape)
-            # print(attn.shape)
-            # exit()
-            
+           
             out = torch.einsum("b i j, b j d -> b i d", attn, v)
             
             out = self.batch_to_head_dim(out)

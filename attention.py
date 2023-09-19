@@ -11,6 +11,8 @@ import matplotlib.tri as mtri
 import scipy.sparse as sp
 from typing import Any, Callable, Dict, List, Optional, Union
 import torchvision.utils as vutils
+from sklearn.decomposition import PCA
+from einops import rearrange
 
 import torch
 import torch.nn.functional as F
@@ -18,6 +20,8 @@ from torchvision import transforms
 from contextlib import contextmanager
 import PIL
 from PIL import Image, ImageDraw
+from math import sqrt
+from skimage.transform import resize
 
 from diffusers.loaders import AttnProcsLayers
 from diffusers.models.attention_processor import LoRAAttnProcessor
@@ -49,17 +53,19 @@ import matplotlib.pyplot as plt
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--prompt', type=str, default="leaning tower of pisa on a field")
-parser.add_argument('--end', type=float, default=0.6)
+parser.add_argument('--visualization_at_t', type=float, default=0.3)
 args = parser.parse_args()
 
 class StableDiffusion:
     @dataclass
     class Config:
         pretrained_model_name_or_path: str = "stabilityai/stable-diffusion-2-1-base"
-        seed: int = 7
+        seed: int = 0
         num_inference_steps: int = 50
         infer_batch_size: int = 1
         half_precision_weights: bool = False 
+        height: int = 512 
+        width: int = 512
 
     cfg: Config 
     def __init__(self):
@@ -77,7 +83,7 @@ class StableDiffusion:
         
         self.generator = torch.Generator(device=torch.device("cpu")).manual_seed(self.cfg.seed)
         self.vae_scale_factor = 2 ** (len(self.vae.config.block_out_channels) - 1)
-
+        
     @property
     def unet(self):
         return self.pipe.unet
@@ -99,7 +105,7 @@ class StableDiffusion:
         return self.pipe.text_encoder
     
     @torch.no_grad()
-    def __call__(
+    def _sample(
         self,
         prompt: Union[str, List[str]] = None,
         height: Optional[int] = None,
@@ -163,7 +169,9 @@ class StableDiffusion:
         # 4. Prepare timesteps
         self.scheduler.set_timesteps(num_inference_steps, device=device)
         timesteps = self.scheduler.timesteps
-
+        self.visualization_at_t = \
+                self.scheduler.timesteps[int((1 - args.visualization_at_t) * self.cfg.num_inference_steps)]
+        
         # 5. Prepare latent variables
         num_channels_latents = self.unet.config.in_channels
         latents = self.pipe.prepare_latents(
@@ -182,9 +190,11 @@ class StableDiffusion:
 
         # 7. Denoising loop
         num_warmup_steps = len(timesteps) - num_inference_steps * self.scheduler.order
+        self.register_attention()
         with self.pipe.progress_bar(total=num_inference_steps) as progress_bar:
             for i, t in enumerate(timesteps):
                 # expand the latents if we are doing classifier free guidance
+                self.register_time(t)
                 latent_model_input = torch.cat([latents] * 2) if do_classifier_free_guidance else latents
                 latent_model_input = self.scheduler.scale_model_input(latent_model_input, t)
 
@@ -222,6 +232,15 @@ class StableDiffusion:
         grid_image = grid_image.permute([1, 2, 0]).detach().cpu().numpy()
         
         return grid_image
+
+    def __call__(self,
+            prompt):
+        generator = torch.Generator(device=self.device).manual_seed(self.cfg.seed)
+        img = self._sample(prompt,
+                    height=self.cfg.height,
+                    width=self.cfg.width,
+                    num_inference_steps=self.cfg.num_inference_steps)
+        return img 
 
     def encode_prompt(
         self,
@@ -352,11 +371,110 @@ class StableDiffusion:
 
         return prompt_embeds, negative_prompt_embeds
 
+    def register_time(self, t):
+        conv_module = self.unet.up_blocks[1].resnets[1]
+        
+        setattr(conv_module, 't', t)
+        down_res_dict = {0: [0, 1], 1: [0, 1], 2: [0, 1]}
+        up_res_dict = {1: [0, 1, 2], 2: [0, 1, 2], 3: [0, 1, 2]}
+        for res in up_res_dict:
+            for block in up_res_dict[res]:
+                module = self.unet.up_blocks[res].attentions[block].transformer_blocks[0].attn1
+                setattr(module, 't', t)
+
+        for res in down_res_dict:
+            for block in down_res_dict[res]:
+                module = self.unet.down_blocks[res].attentions[block].transformer_blocks[0].attn1
+                setattr(module, 't', t)
+        module = self.unet.mid_block.attentions[0].transformer_blocks[0].attn1
+        setattr(module, 't', t)
+
+
+    def register_attention(self, 
+                            ):
+        def sa_forward(module):
+            to_out = module.to_out
+            if type(to_out) is torch.nn.modules.container.ModuleList:
+                to_out = module.to_out[0]
+            else:
+                to_out = module.to_out
+            
+            def forward(x, encoder_hidden_states=None, attention_mask=None):
+                batch_size, sequence_length, dim = x.shape
+                h = module.heads
+    
+                is_cross = encoder_hidden_states is not None
+                
+                y = module.head_to_batch_dim(x)
+                
+                encoder_hidden_states = encoder_hidden_states if is_cross else x
+                
+                q = module.to_q(x)
+                k = module.to_k(encoder_hidden_states)
+                q = module.head_to_batch_dim(q)
+                k = module.head_to_batch_dim(k)
+
+                v = module.to_v(encoder_hidden_states)
+                v = module.head_to_batch_dim(v)
+                
+                sim = torch.einsum("b i d, b j d -> b i j", q, k) * module.scale
+                # attn [batch, h, w]
+                self_attn_map = sim.softmax(dim=-1)
+                
+                if module.t == self.visualization_at_t:
+                    #self_attn_map [B, 256, 256]
+                    
+                    
+                    # rid = vutils.make_grid(out[:int(batch_size / 2), :3], nrow=2, normalize=True, value_range=(0, 1))
+                    # vutils.save_image(rid, "image_grid2.png")
+                    # exit()
+                    self.visualize(self_attn_map[:int(self_attn_map.shape[0] / 2)])
+                    
+                if attention_mask is not None:
+                    attention_mask = attention_mask.reshape(batch_size, -1)
+                    max_neg_value = -torch.finfo(sim.dtype).max
+                    attention_mask = attention_mask[:, None, :].repeat(h, 1, 1)
+                    sim.masked_fill_(~attention_mask, max_neg_value)
+
+                
+                
+                
+                out = torch.einsum("b i j, b j d -> b i d", self_attn_map, v)
+                
+                out = module.batch_to_head_dim(out)
+                
+                return to_out(out)  
+
+            return forward
+        
+        #res_dict = {1: [1, 2], 2: [0, 1, 2], 3: [0, 1, 2]}  # we are injecting attention in blocks 4 - 11 of the decoder, so not in the first block of the lowest resolution
+        #res_dict = {1: [1]}
+        res_dict = {3: [2]}
+        for res in res_dict:
+            for block in res_dict[res]:
+                module = self.unet.up_blocks[res].attentions[block].transformer_blocks[0].attn1
+                module.forward = sa_forward(module)
+
+    def visualize(self, self_attn_map):
+        #feature_maps [b, h * m]
+        feature_maps = rearrange(self_attn_map,'h n m -> n (h m)').detach().cpu().numpy()
+        
+        pca = PCA(n_components=3)
+        feature_maps_pca = pca.fit_transform(feature_maps)
+        h = w = int(sqrt(feature_maps_pca.shape[0]))
+        feature_maps_pca = feature_maps_pca.reshape(h, w, 3)
+        feature_maps_pca_min = feature_maps_pca.min(axis=(0, 1))
+        feature_maps_pca_max = feature_maps_pca.max(axis=(0, 1))
+        feature_maps_pca = (feature_maps_pca - feature_maps_pca_min) / (feature_maps_pca_max - feature_maps_pca_min)
+        #feature_maps_pca = resize(feature_maps_pca, (128, 128, 3), order=0, anti_aliasing=False)
+        feature_maps_pca = np.clip(feature_maps_pca, 0., 1.0)
+        plt.imsave("./test.jpg", feature_maps_pca)
+        
 @logger.catch
 def main():
     model = StableDiffusion()
-    images = model([args.prompt] * 4)
-    plt.imsave("./test.jpg", images)
+    images = model([args.prompt] * 1)
+    plt.imsave("./out.jpg", images)
     print(images.shape)
 
 

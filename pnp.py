@@ -55,8 +55,6 @@ class PNP(nn.Module):
         self.text_embeds = self.get_text_embeds(config["prompt"], config["negative_prompt"])
         self.pnp_guidance_embeds = self.get_text_embeds("", "").chunk(2)[0]
         
-
-
     @torch.no_grad()
     def get_text_embeds(self, prompt, negative_prompt, batch_size=1):
         # Tokenize text and get embeddings
