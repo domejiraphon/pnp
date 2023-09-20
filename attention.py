@@ -447,12 +447,14 @@ class StableDiffusion:
 
             return forward
         
-        #res_dict = {1: [1, 2], 2: [0, 1, 2], 3: [0, 1, 2]}  # we are injecting attention in blocks 4 - 11 of the decoder, so not in the first block of the lowest resolution
+        res_dict = {1: [1, 2], 2: [0, 1, 2], 3: [0, 1, 2]}  # we are injecting attention in blocks 4 - 11 of the decoder, so not in the first block of the lowest resolution
         #res_dict = {1: [1]}
-        res_dict = {3: [2]}
+        #res_dict = {2: [2]}
+        
         for res in res_dict:
             for block in res_dict[res]:
                 module = self.unet.up_blocks[res].attentions[block].transformer_blocks[0].attn1
+                
                 module.forward = sa_forward(module)
 
     def visualize(self, self_attn_map):

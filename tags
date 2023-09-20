@@ -1,0 +1,754 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AbsolutePositionalEmbedding	plug-and-play/ldm/modules/x_transformer.py	/^class AbsolutePositionalEmbedding(nn.Module):$/;"	c
+AbstractDistribution	plug-and-play/ldm/modules/distributions/distributions.py	/^class AbstractDistribution:$/;"	c
+AbstractEncoder	plug-and-play/ldm/modules/encoders/modules.py	/^class AbstractEncoder(nn.Module):$/;"	c
+Attention	plug-and-play/ldm/modules/x_transformer.py	/^class Attention(nn.Module):$/;"	c
+AttentionBlock	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^class AttentionBlock(nn.Module):$/;"	c
+AttentionLayers	plug-and-play/ldm/modules/x_transformer.py	/^class AttentionLayers(nn.Module):$/;"	c
+AttentionPool2d	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^class AttentionPool2d(nn.Module):$/;"	c
+AttnBlock	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class AttnBlock(nn.Module):$/;"	c
+AutoencoderKL	plug-and-play/ldm/models/autoencoder.py	/^class AutoencoderKL(pl.LightningModule):$/;"	c
+BERTEmbedder	plug-and-play/ldm/modules/encoders/modules.py	/^class BERTEmbedder(AbstractEncoder):$/;"	c
+BERTTokenizer	plug-and-play/ldm/modules/encoders/modules.py	/^class BERTTokenizer(AbstractEncoder):$/;"	c
+BasicTransformerBlock	plug-and-play/ldm/modules/attention.py	/^class BasicTransformerBlock(nn.Module):$/;"	c
+CheckpointFunction	plug-and-play/ldm/modules/diffusionmodules/util.py	/^class CheckpointFunction(torch.autograd.Function):$/;"	c
+ClassEmbedder	plug-and-play/ldm/modules/encoders/modules.py	/^class ClassEmbedder(nn.Module):$/;"	c
+Config	attention.py	/^    class Config:$/;"	c	class:StableDiffusion
+Config	attention_xl.py	/^    class Config:$/;"	c	class:StableDiffusion
+Config	preprocess_xl.py	/^    class Config:$/;"	c	class:Preprocess
+CrossAttention	plug-and-play/ldm/modules/attention.py	/^class CrossAttention(nn.Module):$/;"	c
+DDIMSampler	plug-and-play/ldm/models/diffusion/ddim.py	/^class DDIMSampler(object):$/;"	c
+DDPM	plug-and-play/ldm/models/diffusion/ddpm.py	/^class DDPM(pl.LightningModule):$/;"	c
+DEFAULT_DIM_HEAD	plug-and-play/ldm/modules/x_transformer.py	/^DEFAULT_DIM_HEAD = 64$/;"	v
+Decoder	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class Decoder(nn.Module):$/;"	c
+DiagonalGaussianDistribution	plug-and-play/ldm/modules/distributions/distributions.py	/^class DiagonalGaussianDistribution(object):$/;"	c
+DiffusionWrapper	plug-and-play/ldm/models/diffusion/ddpm.py	/^class DiffusionWrapper(pl.LightningModule):$/;"	c
+DiracDistribution	plug-and-play/ldm/modules/distributions/distributions.py	/^class DiracDistribution(AbstractDistribution):$/;"	c
+Downsample	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class Downsample(nn.Module):$/;"	c
+Downsample	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^class Downsample(nn.Module):$/;"	c
+Encoder	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class Encoder(nn.Module):$/;"	c
+Encoder	plug-and-play/ldm/modules/x_transformer.py	/^class Encoder(AttentionLayers):$/;"	c
+EncoderUNetModel	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^class EncoderUNetModel(nn.Module):$/;"	c
+FeedForward	plug-and-play/ldm/modules/attention.py	/^class FeedForward(nn.Module):$/;"	c
+FeedForward	plug-and-play/ldm/modules/x_transformer.py	/^class FeedForward(nn.Module):$/;"	c
+FirstStagePostProcessor	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class FirstStagePostProcessor(nn.Module):$/;"	c
+FixedPositionalEmbedding	plug-and-play/ldm/modules/x_transformer.py	/^class FixedPositionalEmbedding(nn.Module):$/;"	c
+FrozenCLIPEmbedder	plug-and-play/ldm/modules/encoders/modules.py	/^class FrozenCLIPEmbedder(AbstractEncoder):$/;"	c
+FrozenCLIPTextEmbedder	plug-and-play/ldm/modules/encoders/modules.py	/^class FrozenCLIPTextEmbedder(nn.Module):$/;"	c
+FrozenClipImageEmbedder	plug-and-play/ldm/modules/encoders/modules.py	/^class FrozenClipImageEmbedder(nn.Module):$/;"	c
+GEGLU	plug-and-play/ldm/modules/attention.py	/^class GEGLU(nn.Module):$/;"	c
+GEGLU	plug-and-play/ldm/modules/x_transformer.py	/^class GEGLU(nn.Module):$/;"	c
+GRUGating	plug-and-play/ldm/modules/x_transformer.py	/^class GRUGating(nn.Module):$/;"	c
+GroupNorm32	plug-and-play/ldm/modules/diffusionmodules/util.py	/^class GroupNorm32(nn.GroupNorm):$/;"	c
+HybridConditioner	plug-and-play/ldm/modules/diffusionmodules/util.py	/^class HybridConditioner(nn.Module):$/;"	c
+IMG_EXTENSIONS	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^IMG_EXTENSIONS = ['.jpg', '.JPG', '.jpeg', '.JPEG', '.png', '.PNG', '.ppm', '.PPM', '.bmp', '.BMP', '.tif']$/;"	v
+IdentityFirstStage	plug-and-play/ldm/models/autoencoder.py	/^class IdentityFirstStage(torch.nn.Module):$/;"	c
+Intermediates	plug-and-play/ldm/modules/x_transformer.py	/^Intermediates = namedtuple('Intermediates', [$/;"	v
+LPIPSWithDiscriminator	plug-and-play/ldm/modules/losses/contperceptual.py	/^class LPIPSWithDiscriminator(nn.Module):$/;"	c
+LambdaLinearScheduler	plug-and-play/ldm/lr_scheduler.py	/^class LambdaLinearScheduler(LambdaWarmUpCosineScheduler2):$/;"	c
+LambdaWarmUpCosineScheduler	plug-and-play/ldm/lr_scheduler.py	/^class LambdaWarmUpCosineScheduler:$/;"	c
+LambdaWarmUpCosineScheduler2	plug-and-play/ldm/lr_scheduler.py	/^class LambdaWarmUpCosineScheduler2:$/;"	c
+LatentDiffusion	plug-and-play/ldm/models/diffusion/ddpm.py	/^class LatentDiffusion(DDPM):$/;"	c
+LatentRescaler	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class LatentRescaler(nn.Module):$/;"	c
+LayerIntermediates	plug-and-play/ldm/modules/x_transformer.py	/^LayerIntermediates = namedtuple('Intermediates', [$/;"	v
+Layout2ImgDiffusion	plug-and-play/ldm/models/diffusion/ddpm.py	/^class Layout2ImgDiffusion(LatentDiffusion):$/;"	c
+LinAttnBlock	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class LinAttnBlock(LinearAttention):$/;"	c
+LinearAttention	plug-and-play/ldm/modules/attention.py	/^class LinearAttention(nn.Module):$/;"	c
+LitEma	plug-and-play/ldm/modules/ema.py	/^class LitEma(nn.Module):$/;"	c
+MergedRescaleDecoder	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class MergedRescaleDecoder(nn.Module):$/;"	c
+MergedRescaleEncoder	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class MergedRescaleEncoder(nn.Module):$/;"	c
+MeshDeformator	attention_xl.py	/^class MeshDeformator:$/;"	c
+MeshDeformator	pnp_utils.py	/^class MeshDeformator:$/;"	c
+Model	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class Model(nn.Module):$/;"	c
+NoisyLatentImageClassifier	plug-and-play/ldm/models/diffusion/classifier.py	/^class NoisyLatentImageClassifier(pl.LightningModule):$/;"	c
+Normalize	plug-and-play/ldm/modules/attention.py	/^def Normalize(in_channels):$/;"	f
+Normalize	plug-and-play/ldm/modules/diffusionmodules/model.py	/^def Normalize(in_channels, num_groups=32):$/;"	f
+PLMSSampler	plug-and-play/ldm/models/diffusion/plms.py	/^class PLMSSampler(object):$/;"	c
+PNP	pnp.py	/^class PNP(nn.Module):$/;"	c
+PNP	pnp_xl.py	/^class PNP(nn.Module):$/;"	c
+Predictor	plug-and-play/predict.py	/^class Predictor(BasePredictor):$/;"	c
+Preprocess	preprocess.py	/^class Preprocess(nn.Module):$/;"	c
+Preprocess	preprocess_xl.py	/^class Preprocess(nn.Module):$/;"	c
+QKVAttention	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^class QKVAttention(nn.Module):$/;"	c
+QKVAttentionLegacy	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^class QKVAttentionLegacy(nn.Module):$/;"	c
+RMSNorm	plug-and-play/ldm/modules/x_transformer.py	/^class RMSNorm(nn.Module):$/;"	c
+ResBlock	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^class ResBlock(TimestepBlock):$/;"	c
+Residual	plug-and-play/ldm/modules/x_transformer.py	/^class Residual(nn.Module):$/;"	c
+Resize	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class Resize(nn.Module):$/;"	c
+ResnetBlock	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class ResnetBlock(nn.Module):$/;"	c
+Rezero	plug-and-play/ldm/modules/x_transformer.py	/^class Rezero(nn.Module):$/;"	c
+Scale	plug-and-play/ldm/modules/x_transformer.py	/^class Scale(nn.Module):$/;"	c
+ScaleNorm	plug-and-play/ldm/modules/x_transformer.py	/^class ScaleNorm(nn.Module):$/;"	c
+SiLU	plug-and-play/ldm/modules/diffusionmodules/util.py	/^class SiLU(nn.Module):$/;"	c
+SimpleDecoder	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class SimpleDecoder(nn.Module):$/;"	c
+SpatialRescaler	plug-and-play/ldm/modules/encoders/modules.py	/^class SpatialRescaler(nn.Module):$/;"	c
+SpatialSelfAttention	plug-and-play/ldm/modules/attention.py	/^class SpatialSelfAttention(nn.Module):$/;"	c
+SpatialTransformer	plug-and-play/ldm/modules/attention.py	/^class SpatialTransformer(nn.Module):$/;"	c
+StableDiffusion	attention.py	/^class StableDiffusion:$/;"	c
+StableDiffusion	attention_xl.py	/^class StableDiffusion:$/;"	c
+TimestepBlock	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^class TimestepBlock(nn.Module):$/;"	c
+TimestepEmbedSequential	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^class TimestepEmbedSequential(nn.Sequential, TimestepBlock):$/;"	c
+TransformerEmbedder	plug-and-play/ldm/modules/encoders/modules.py	/^class TransformerEmbedder(AbstractEncoder):$/;"	c
+TransformerWrapper	plug-and-play/ldm/modules/x_transformer.py	/^class TransformerWrapper(nn.Module):$/;"	c
+TransposedUpsample	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^class TransposedUpsample(nn.Module):$/;"	c
+UNetModel	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^class UNetModel(nn.Module):$/;"	c
+Upsample	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class Upsample(nn.Module):$/;"	c
+Upsample	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^class Upsample(nn.Module):$/;"	c
+UpsampleDecoder	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class UpsampleDecoder(nn.Module):$/;"	c
+Upsampler	plug-and-play/ldm/modules/diffusionmodules/model.py	/^class Upsampler(nn.Module):$/;"	c
+VQLPIPSWithDiscriminator	plug-and-play/ldm/modules/losses/vqperceptual.py	/^class VQLPIPSWithDiscriminator(nn.Module):$/;"	c
+VQModel	plug-and-play/ldm/models/autoencoder.py	/^class VQModel(pl.LightningModule):$/;"	c
+VQModelInterface	plug-and-play/ldm/models/autoencoder.py	/^class VQModelInterface(VQModel):$/;"	c
+_CACHE	pnp_utils.py	/^_CACHE = {}$/;"	v
+__call__	attention.py	/^    def __call__(self,$/;"	m	class:StableDiffusion	file:
+__call__	attention_xl.py	/^    def __call__(self,$/;"	m	class:StableDiffusion	file:
+__call__	plug-and-play/ldm/lr_scheduler.py	/^    def __call__(self, n, **kwargs):$/;"	m	class:LambdaWarmUpCosineScheduler	file:
+__call__	plug-and-play/ldm/lr_scheduler.py	/^    def __call__(self, n, **kwargs):$/;"	m	class:LambdaWarmUpCosineScheduler2	file:
+__conditioning_keys__	plug-and-play/ldm/models/diffusion/ddpm.py	/^__conditioning_keys__ = {'concat': 'c_concat',$/;"	v
+__init__	attention.py	/^    def __init__(self):$/;"	m	class:StableDiffusion
+__init__	attention_xl.py	/^    def __init__(self):$/;"	m	class:StableDiffusion
+__init__	attention_xl.py	/^    def __init__(self, $/;"	m	class:MeshDeformator
+__init__	plug-and-play/ldm/lr_scheduler.py	/^    def __init__(self, warm_up_steps, f_min, f_max, f_start, cycle_lengths, verbosity_interval=0):$/;"	m	class:LambdaWarmUpCosineScheduler2
+__init__	plug-and-play/ldm/lr_scheduler.py	/^    def __init__(self, warm_up_steps, lr_min, lr_max, lr_start, max_decay_steps, verbosity_interval=0):$/;"	m	class:LambdaWarmUpCosineScheduler
+__init__	plug-and-play/ldm/models/autoencoder.py	/^    def __init__(self, *args, vq_interface=False, **kwargs):$/;"	m	class:IdentityFirstStage
+__init__	plug-and-play/ldm/models/autoencoder.py	/^    def __init__(self, embed_dim, *args, **kwargs):$/;"	m	class:VQModelInterface
+__init__	plug-and-play/ldm/models/autoencoder.py	/^    def __init__(self,$/;"	m	class:AutoencoderKL
+__init__	plug-and-play/ldm/models/autoencoder.py	/^    def __init__(self,$/;"	m	class:VQModel
+__init__	plug-and-play/ldm/models/diffusion/classifier.py	/^    def __init__(self,$/;"	m	class:NoisyLatentImageClassifier
+__init__	plug-and-play/ldm/models/diffusion/ddim.py	/^    def __init__(self, model, schedule="linear", **kwargs):$/;"	m	class:DDIMSampler
+__init__	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def __init__(self, cond_stage_key, *args, **kwargs):$/;"	m	class:Layout2ImgDiffusion
+__init__	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def __init__(self, diff_model_config, conditioning_key):$/;"	m	class:DiffusionWrapper
+__init__	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def __init__(self,$/;"	m	class:DDPM
+__init__	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def __init__(self,$/;"	m	class:LatentDiffusion
+__init__	plug-and-play/ldm/models/diffusion/plms.py	/^    def __init__(self, model, schedule="linear", **kwargs):$/;"	m	class:PLMSSampler
+__init__	plug-and-play/ldm/modules/attention.py	/^    def __init__(self, dim, dim_out=None, mult=4, glu=False, dropout=0.):$/;"	m	class:FeedForward
+__init__	plug-and-play/ldm/modules/attention.py	/^    def __init__(self, dim, heads=4, dim_head=32):$/;"	m	class:LinearAttention
+__init__	plug-and-play/ldm/modules/attention.py	/^    def __init__(self, dim, n_heads, d_head, dropout=0., context_dim=None, gated_ff=True, checkpoint=True):$/;"	m	class:BasicTransformerBlock
+__init__	plug-and-play/ldm/modules/attention.py	/^    def __init__(self, dim_in, dim_out):$/;"	m	class:GEGLU
+__init__	plug-and-play/ldm/modules/attention.py	/^    def __init__(self, in_channels):$/;"	m	class:SpatialSelfAttention
+__init__	plug-and-play/ldm/modules/attention.py	/^    def __init__(self, in_channels, n_heads, d_head,$/;"	m	class:SpatialTransformer
+__init__	plug-and-play/ldm/modules/attention.py	/^    def __init__(self, query_dim, context_dim=None, heads=8, dim_head=64, dropout=0.):$/;"	m	class:CrossAttention
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, *, ch, out_ch, ch_mult=(1,2,4,8), num_res_blocks,$/;"	m	class:Decoder
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, *, ch, out_ch, ch_mult=(1,2,4,8), num_res_blocks,$/;"	m	class:Encoder
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, *, ch, out_ch, ch_mult=(1,2,4,8), num_res_blocks,$/;"	m	class:Model
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, *, in_channels, out_channels=None, conv_shortcut=False,$/;"	m	class:ResnetBlock
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, ch_mult:list, in_channels,$/;"	m	class:FirstStagePostProcessor
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, factor, in_channels, mid_channels, out_channels, depth=2):$/;"	m	class:LatentRescaler
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, in_channels):$/;"	m	class:AttnBlock
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, in_channels):$/;"	m	class:LinAttnBlock
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, in_channels, ch, resolution, out_ch, num_res_blocks,$/;"	m	class:MergedRescaleEncoder
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, in_channels, out_channels, *args, **kwargs):$/;"	m	class:SimpleDecoder
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, in_channels, out_channels, ch, num_res_blocks, resolution,$/;"	m	class:UpsampleDecoder
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, in_channels, with_conv):$/;"	m	class:Downsample
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, in_channels, with_conv):$/;"	m	class:Upsample
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, in_channels=None, learned=False, mode="bilinear"):$/;"	m	class:Resize
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, in_size, out_size, in_channels, out_channels, ch_mult=2):$/;"	m	class:Upsampler
+__init__	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def __init__(self, z_channels, out_ch, resolution, num_res_blocks, attn_resolutions, ch, ch_mult=(1,2,4,8),$/;"	m	class:MergedRescaleDecoder
+__init__	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def __init__($/;"	m	class:AttentionBlock
+__init__	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def __init__($/;"	m	class:AttentionPool2d
+__init__	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def __init__($/;"	m	class:EncoderUNetModel
+__init__	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def __init__($/;"	m	class:ResBlock
+__init__	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def __init__($/;"	m	class:UNetModel
+__init__	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def __init__(self, channels, out_channels=None, ks=5):$/;"	m	class:TransposedUpsample
+__init__	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def __init__(self, channels, use_conv, dims=2, out_channels=None, padding=1):$/;"	m	class:Upsample
+__init__	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def __init__(self, channels, use_conv, dims=2, out_channels=None,padding=1):$/;"	m	class:Downsample
+__init__	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def __init__(self, n_heads):$/;"	m	class:QKVAttention
+__init__	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def __init__(self, n_heads):$/;"	m	class:QKVAttentionLegacy
+__init__	plug-and-play/ldm/modules/diffusionmodules/util.py	/^    def __init__(self, c_concat_config, c_crossattn_config):$/;"	m	class:HybridConditioner
+__init__	plug-and-play/ldm/modules/distributions/distributions.py	/^    def __init__(self, parameters, deterministic=False):$/;"	m	class:DiagonalGaussianDistribution
+__init__	plug-and-play/ldm/modules/distributions/distributions.py	/^    def __init__(self, value):$/;"	m	class:DiracDistribution
+__init__	plug-and-play/ldm/modules/ema.py	/^    def __init__(self, model, decay=0.9999, use_num_upates=True):$/;"	m	class:LitEma
+__init__	plug-and-play/ldm/modules/encoders/modules.py	/^    def __init__($/;"	m	class:FrozenClipImageEmbedder
+__init__	plug-and-play/ldm/modules/encoders/modules.py	/^    def __init__(self):$/;"	m	class:AbstractEncoder
+__init__	plug-and-play/ldm/modules/encoders/modules.py	/^    def __init__(self, device="cuda", vq_interface=True, max_length=77):$/;"	m	class:BERTTokenizer
+__init__	plug-and-play/ldm/modules/encoders/modules.py	/^    def __init__(self, embed_dim, n_classes=1000, key='class'):$/;"	m	class:ClassEmbedder
+__init__	plug-and-play/ldm/modules/encoders/modules.py	/^    def __init__(self, n_embed, n_layer, vocab_size, max_seq_len=77, device="cuda"):$/;"	m	class:TransformerEmbedder
+__init__	plug-and-play/ldm/modules/encoders/modules.py	/^    def __init__(self, n_embed, n_layer, vocab_size=30522, max_seq_len=77,$/;"	m	class:BERTEmbedder
+__init__	plug-and-play/ldm/modules/encoders/modules.py	/^    def __init__(self, version="openai\/clip-vit-large-patch14", device="cuda", max_length=77):$/;"	m	class:FrozenCLIPEmbedder
+__init__	plug-and-play/ldm/modules/encoders/modules.py	/^    def __init__(self, version='ViT-L\/14', device="cuda", max_length=77, n_repeat=1, normalize=True):$/;"	m	class:FrozenCLIPTextEmbedder
+__init__	plug-and-play/ldm/modules/encoders/modules.py	/^    def __init__(self,$/;"	m	class:SpatialRescaler
+__init__	plug-and-play/ldm/modules/losses/contperceptual.py	/^    def __init__(self, disc_start, logvar_init=0.0, kl_weight=1.0, pixelloss_weight=1.0,$/;"	m	class:LPIPSWithDiscriminator
+__init__	plug-and-play/ldm/modules/losses/vqperceptual.py	/^    def __init__(self, disc_start, codebook_weight=1.0, pixelloss_weight=1.0,$/;"	m	class:VQLPIPSWithDiscriminator
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__($/;"	m	class:Attention
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__($/;"	m	class:AttentionLayers
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__($/;"	m	class:TransformerWrapper
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__(self, **kwargs):$/;"	m	class:Encoder
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__(self, dim):$/;"	m	class:FixedPositionalEmbedding
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__(self, dim):$/;"	m	class:GRUGating
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__(self, dim, dim_out=None, mult=4, glu=False, dropout=0.):$/;"	m	class:FeedForward
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__(self, dim, eps=1e-5):$/;"	m	class:ScaleNorm
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__(self, dim, eps=1e-8):$/;"	m	class:RMSNorm
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__(self, dim, max_seq_len):$/;"	m	class:AbsolutePositionalEmbedding
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__(self, dim_in, dim_out):$/;"	m	class:GEGLU
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__(self, fn):$/;"	m	class:Rezero
+__init__	plug-and-play/ldm/modules/x_transformer.py	/^    def __init__(self, value, fn):$/;"	m	class:Scale
+__init__	pnp.py	/^    def __init__(self, config):$/;"	m	class:PNP
+__init__	pnp_utils.py	/^    def __init__(self, $/;"	m	class:MeshDeformator
+__init__	pnp_xl.py	/^    def __init__(self, config):$/;"	m	class:PNP
+__init__	preprocess.py	/^    def __init__(self, device, sd_version='2.0', hf_key=None):$/;"	m	class:Preprocess
+__init__	preprocess_xl.py	/^    def __init__(self, device, sd_version='2.0', hf_key=None):$/;"	m	class:Preprocess
+__models__	plug-and-play/ldm/models/diffusion/classifier.py	/^__models__ = {$/;"	v
+_augment	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^    def _augment(img):$/;"	f	function:augment_imgs
+_do_parallel_data_prefetch	plug-and-play/ldm/util.py	/^def _do_parallel_data_prefetch(func, Q, data, idx, idx_to_fn=False):$/;"	f
+_forward	plug-and-play/ldm/modules/attention.py	/^    def _forward(self,$/;"	m	class:BasicTransformerBlock
+_forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def _forward(self, x):$/;"	m	class:AttentionBlock
+_forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def _forward(self, x, emb, out_layers_injected=None):$/;"	m	class:ResBlock
+_get_denoise_row_from_list	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def _get_denoise_row_from_list(self, samples, desc='', force_no_decoder_quantization=False):$/;"	m	class:LatentDiffusion
+_get_paths_from_images	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def _get_paths_from_images(path):$/;"	f
+_get_rows_from_list	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def _get_rows_from_list(self, samples):$/;"	m	class:DDPM
+_predict_eps_from_xstart	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def _predict_eps_from_xstart(self, x_t, t, pred_xstart):$/;"	m	class:LatentDiffusion
+_prior_bpd	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def _prior_bpd(self, x_start):$/;"	m	class:LatentDiffusion
+_rescale_annotations	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def _rescale_annotations(self, bboxes, crop_coordinates):  # TODO: move to dataset$/;"	m	class:LatentDiffusion
+_sample	attention.py	/^    def _sample($/;"	m	class:StableDiffusion
+_sample	attention_xl.py	/^    def _sample($/;"	m	class:StableDiffusion
+_validation_step	plug-and-play/ldm/models/autoencoder.py	/^    def _validation_step(self, batch, batch_idx, suffix=""):$/;"	m	class:VQModel
+add_Gaussian_noise	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def add_Gaussian_noise(img, noise_level1=2, noise_level2=25):$/;"	f
+add_Gaussian_noise	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def add_Gaussian_noise(img, noise_level1=2, noise_level2=25):$/;"	f
+add_JPEG_noise	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def add_JPEG_noise(img):$/;"	f
+add_JPEG_noise	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def add_JPEG_noise(img):$/;"	f
+add_Poisson_noise	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def add_Poisson_noise(img):$/;"	f
+add_Poisson_noise	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def add_Poisson_noise(img):$/;"	f
+add_blur	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def add_blur(img, sf=4):$/;"	f
+add_blur	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def add_blur(img, sf=4):$/;"	f
+add_resize	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def add_resize(img, sf=4):$/;"	f
+add_resize	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def add_resize(img, sf=4):$/;"	f
+add_sharpening	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def add_sharpening(img, weight=0.5, radius=50, threshold=10):$/;"	f
+add_sharpening	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def add_sharpening(img, weight=0.5, radius=50, threshold=10):$/;"	f
+add_speckle_noise	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def add_speckle_noise(img, noise_level1=2, noise_level2=25):$/;"	f
+add_speckle_noise	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def add_speckle_noise(img, noise_level1=2, noise_level2=25):$/;"	f
+adopt_weight	plug-and-play/ldm/modules/losses/vqperceptual.py	/^def adopt_weight(weight, global_step, threshold=0, value=0.):$/;"	f
+always	plug-and-play/ldm/modules/x_transformer.py	/^def always(val):$/;"	f
+analytic_kernel	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def analytic_kernel(k):$/;"	f
+analytic_kernel	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def analytic_kernel(k):$/;"	f
+anisotropic_Gaussian	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def anisotropic_Gaussian(ksize=15, theta=np.pi, l1=6, l2=6):$/;"	f
+anisotropic_Gaussian	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def anisotropic_Gaussian(ksize=15, theta=np.pi, l1=6, l2=6):$/;"	f
+apply_model	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def apply_model(self,$/;"	m	class:LatentDiffusion
+args	attention.py	/^args = parser.parse_args()$/;"	v
+args	attention_xl.py	/^args = parser.parse_args()$/;"	v
+augment_img	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def augment_img(img, mode=0):$/;"	f
+augment_img_np3	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def augment_img_np3(img, mode=0):$/;"	f
+augment_img_tensor	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def augment_img_tensor(img, mode=0):$/;"	f
+augment_img_tensor4	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def augment_img_tensor4(img, mode=0):$/;"	f
+augment_imgs	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def augment_imgs(img_list, hflip=True, rot=True):$/;"	f
+avg_pool_nd	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def avg_pool_nd(dims, *args, **kwargs):$/;"	f
+backward	plug-and-play/ldm/modules/diffusionmodules/util.py	/^    def backward(ctx, *output_grads):$/;"	m	class:CheckpointFunction
+betas_for_alpha_bar	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def betas_for_alpha_bar(num_diffusion_timesteps, alpha_bar, max_beta=0.999):$/;"	f
+bgr2ycbcr	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def bgr2ycbcr(img, only_y=True):$/;"	f
+bicubic_degradation	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def bicubic_degradation(x, sf=3):$/;"	f
+bicubic_degradation	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def bicubic_degradation(x, sf=3):$/;"	f
+blur	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def blur(x, k):$/;"	f
+blur	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def blur(x, k):$/;"	f
+build_mesh_from_image	attention_xl.py	/^    def build_mesh_from_image(self) -> None:$/;"	m	class:MeshDeformator
+build_mesh_from_image	pnp_utils.py	/^    def build_mesh_from_image(self) -> None:$/;"	m	class:MeshDeformator
+calculate_adaptive_weight	plug-and-play/ldm/modules/losses/contperceptual.py	/^    def calculate_adaptive_weight(self, nll_loss, g_loss, last_layer=None):$/;"	m	class:LPIPSWithDiscriminator
+calculate_adaptive_weight	plug-and-play/ldm/modules/losses/vqperceptual.py	/^    def calculate_adaptive_weight(self, nll_loss, g_loss, last_layer=None):$/;"	m	class:VQLPIPSWithDiscriminator
+calculate_psnr	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def calculate_psnr(img1, img2, border=0):$/;"	f
+calculate_ssim	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def calculate_ssim(img1, img2, border=0):$/;"	f
+calculate_weights_indices	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def calculate_weights_indices(in_length, out_length, scale, kernel, kernel_width, antialiasing):$/;"	f
+channel_convert	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def channel_convert(in_c, tar_type, img_list):$/;"	f
+check_safety	plug-and-play/pnp_utils.py	/^def check_safety(x_image):$/;"	f
+checkpoint	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def checkpoint(func, inputs, params, flag):$/;"	f
+classical_degradation	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def classical_degradation(x, k, sf=3):$/;"	f
+classical_degradation	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def classical_degradation(x, k, sf=3):$/;"	f
+compute_top_k	plug-and-play/ldm/models/diffusion/classifier.py	/^    def compute_top_k(self, logits, labels, k, reduction="mean"):$/;"	m	class:NoisyLatentImageClassifier
+configure_optimizers	plug-and-play/ldm/models/autoencoder.py	/^    def configure_optimizers(self):$/;"	m	class:AutoencoderKL
+configure_optimizers	plug-and-play/ldm/models/autoencoder.py	/^    def configure_optimizers(self):$/;"	m	class:VQModel
+configure_optimizers	plug-and-play/ldm/models/diffusion/classifier.py	/^    def configure_optimizers(self):$/;"	m	class:NoisyLatentImageClassifier
+configure_optimizers	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def configure_optimizers(self):$/;"	m	class:DDPM
+configure_optimizers	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def configure_optimizers(self):$/;"	m	class:LatentDiffusion
+conv_forward	pnp_utils.py	/^    def conv_forward(self):$/;"	f	function:register_conv_control_efficient
+conv_nd	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def conv_nd(dims, *args, **kwargs):$/;"	f
+convert_module_to_f16	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^def convert_module_to_f16(x):$/;"	f
+convert_module_to_f32	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^def convert_module_to_f32(x):$/;"	f
+convert_to_fp16	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def convert_to_fp16(self):$/;"	m	class:EncoderUNetModel
+convert_to_fp16	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def convert_to_fp16(self):$/;"	m	class:UNetModel
+convert_to_fp32	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def convert_to_fp32(self):$/;"	m	class:EncoderUNetModel
+convert_to_fp32	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def convert_to_fp32(self):$/;"	m	class:UNetModel
+copy_to	plug-and-play/ldm/modules/ema.py	/^    def copy_to(self, model):$/;"	m	class:LitEma
+count_flops	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def count_flops(model, _x, y):$/;"	m	class:QKVAttention
+count_flops	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def count_flops(model, _x, y):$/;"	m	class:QKVAttentionLegacy
+count_flops_attn	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^def count_flops_attn(model, _x, y):$/;"	f
+count_params	plug-and-play/ldm/util.py	/^def count_params(model, verbose=False):$/;"	f
+cubic	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def cubic(x):$/;"	f
+ddim_inversion	preprocess.py	/^    def ddim_inversion(self, cond, latent, save_path, save_latents=True,$/;"	m	class:Preprocess
+ddim_inversion	preprocess_xl.py	/^    def ddim_inversion(self, cond, latent, save_path, save_latents=True,$/;"	m	class:Preprocess
+ddim_sample	preprocess.py	/^    def ddim_sample(self, x, cond, save_path, save_latents=False, timesteps_to_save=None):$/;"	m	class:Preprocess
+ddim_sample	preprocess_xl.py	/^    def ddim_sample(self, x, cond, save_path, save_latents=False, $/;"	m	class:Preprocess
+ddim_sampler_callback	plug-and-play/predict.py	/^    def ddim_sampler_callback(pred_x0, xt, i):$/;"	f	function:extract_features
+ddim_sampler_callback	plug-and-play/predict.py	/^    def ddim_sampler_callback(pred_x0, xt, i):$/;"	f	function:run_pnp
+ddim_sampler_callback	plug-and-play/run_features_extraction.py	/^    def ddim_sampler_callback(pred_x0, xt, i):$/;"	f	function:main
+ddim_sampler_callback	plug-and-play/run_pnp.py	/^    def ddim_sampler_callback(pred_x0, xt, i):$/;"	f	function:main
+ddim_sampling	plug-and-play/ldm/models/diffusion/ddim.py	/^    def ddim_sampling(self, cond, shape, negative_conditioning=None,$/;"	m	class:DDIMSampler
+decode	plug-and-play/ldm/models/autoencoder.py	/^    def decode(self, h, force_not_quantize=False):$/;"	m	class:VQModelInterface
+decode	plug-and-play/ldm/models/autoencoder.py	/^    def decode(self, quant):$/;"	m	class:VQModel
+decode	plug-and-play/ldm/models/autoencoder.py	/^    def decode(self, x, *args, **kwargs):$/;"	m	class:IdentityFirstStage
+decode	plug-and-play/ldm/models/autoencoder.py	/^    def decode(self, z):$/;"	m	class:AutoencoderKL
+decode	plug-and-play/ldm/models/diffusion/ddim.py	/^    def decode(self, x_latent, cond, t_start, unconditional_guidance_scale=1.0, unconditional_conditioning=None,$/;"	m	class:DDIMSampler
+decode	plug-and-play/ldm/modules/encoders/modules.py	/^    def decode(self, text):$/;"	m	class:BERTTokenizer
+decode_code	plug-and-play/ldm/models/autoencoder.py	/^    def decode_code(self, code_b):$/;"	m	class:VQModel
+decode_first_stage	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def decode_first_stage(self, z, predict_cids=False, force_not_quantize=False):$/;"	m	class:LatentDiffusion
+decode_latent	pnp.py	/^    def decode_latent(self, latent):$/;"	m	class:PNP
+decode_latent	pnp_xl.py	/^    def decode_latent(self, latent):$/;"	m	class:PNP
+decode_latents	preprocess.py	/^    def decode_latents(self, latents):$/;"	m	class:Preprocess
+decode_latents	preprocess_xl.py	/^    def decode_latents(self, latents):$/;"	m	class:Preprocess
+default	plug-and-play/ldm/modules/attention.py	/^def default(val, d):$/;"	f
+default	plug-and-play/ldm/modules/x_transformer.py	/^def default(val, d):$/;"	f
+default	plug-and-play/ldm/util.py	/^def default(val, d):$/;"	f
+default	preprocess.py	/^                        default='data\/horse.jpg')$/;"	v
+default	preprocess_xl.py	/^                        default='data\/horse.jpg')$/;"	v
+deg_fn	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^	deg_fn = partial(degradation_bsrgan_variant, sf=sf)$/;"	v
+deg_fn	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^    deg_fn = partial(degradation_bsrgan_variant, sf=sf)$/;"	v
+degradation_bsrgan	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def degradation_bsrgan(img, sf=4, lq_patchsize=72, isp_model=None):$/;"	f
+degradation_bsrgan	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def degradation_bsrgan(img, sf=4, lq_patchsize=72, isp_model=None):$/;"	f
+degradation_bsrgan_plus	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def degradation_bsrgan_plus(img, sf=4, shuffle_prob=0.5, use_sharp=True, lq_patchsize=64, isp_model=None):$/;"	f
+degradation_bsrgan_variant	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def degradation_bsrgan_variant(image, sf=4, isp_model=None):$/;"	f
+degradation_bsrgan_variant	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def degradation_bsrgan_variant(image, sf=4, isp_model=None):$/;"	f
+delta_border	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def delta_border(self, h, w):$/;"	m	class:LatentDiffusion
+denoise_step	pnp.py	/^    def denoise_step(self, x, t):$/;"	m	class:PNP
+denoise_step	pnp_xl.py	/^    def denoise_step(self, x, t):$/;"	m	class:PNP
+description	plug-and-play/setup.py	/^    description='',$/;"	v
+device	plug-and-play/predict.py	/^device = torch.device("cuda" if torch.cuda.is_available() else "cpu")$/;"	v
+device	preprocess.py	/^    device = 'cuda'$/;"	v
+device	preprocess_xl.py	/^    device = 'cuda'$/;"	v
+differentiable_decode_first_stage	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def differentiable_decode_first_stage(self, z, predict_cids=False, force_not_quantize=False):$/;"	m	class:LatentDiffusion
+disabled_train	plug-and-play/ldm/models/diffusion/classifier.py	/^def disabled_train(self, mode=True):$/;"	f
+disabled_train	plug-and-play/ldm/models/diffusion/ddpm.py	/^def disabled_train(self, mode=True):$/;"	f
+dpsr_degradation	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def dpsr_degradation(x, k, sf=3):$/;"	f
+dpsr_degradation	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def dpsr_degradation(x, k, sf=3):$/;"	f
+ema_scope	plug-and-play/ldm/models/autoencoder.py	/^    def ema_scope(self, context=None):$/;"	m	class:VQModel
+ema_scope	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def ema_scope(self, context=None):$/;"	m	class:DDPM
+encode	plug-and-play/ldm/models/autoencoder.py	/^    def encode(self, x):$/;"	m	class:AutoencoderKL
+encode	plug-and-play/ldm/models/autoencoder.py	/^    def encode(self, x):$/;"	m	class:VQModel
+encode	plug-and-play/ldm/models/autoencoder.py	/^    def encode(self, x):$/;"	m	class:VQModelInterface
+encode	plug-and-play/ldm/models/autoencoder.py	/^    def encode(self, x, *args, **kwargs):$/;"	m	class:IdentityFirstStage
+encode	plug-and-play/ldm/modules/encoders/modules.py	/^    def encode(self, *args, **kwargs):$/;"	m	class:AbstractEncoder
+encode	plug-and-play/ldm/modules/encoders/modules.py	/^    def encode(self, text):$/;"	m	class:BERTEmbedder
+encode	plug-and-play/ldm/modules/encoders/modules.py	/^    def encode(self, text):$/;"	m	class:BERTTokenizer
+encode	plug-and-play/ldm/modules/encoders/modules.py	/^    def encode(self, text):$/;"	m	class:FrozenCLIPEmbedder
+encode	plug-and-play/ldm/modules/encoders/modules.py	/^    def encode(self, text):$/;"	m	class:FrozenCLIPTextEmbedder
+encode	plug-and-play/ldm/modules/encoders/modules.py	/^    def encode(self, x):$/;"	m	class:SpatialRescaler
+encode	plug-and-play/ldm/modules/encoders/modules.py	/^    def encode(self, x):$/;"	m	class:TransformerEmbedder
+encode_ddim	plug-and-play/ldm/models/diffusion/ddim.py	/^    def encode_ddim(self, img, num_steps,conditioning, unconditional_conditioning=None ,unconditional_guidance_scale=1.):$/;"	m	class:DDIMSampler
+encode_first_stage	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def encode_first_stage(self, x):$/;"	m	class:LatentDiffusion
+encode_imgs	preprocess.py	/^    def encode_imgs(self, imgs):$/;"	m	class:Preprocess
+encode_imgs	preprocess_xl.py	/^    def encode_imgs(self, imgs):$/;"	m	class:Preprocess
+encode_prompt	attention.py	/^    def encode_prompt($/;"	m	class:StableDiffusion
+encode_to_prequant	plug-and-play/ldm/models/autoencoder.py	/^    def encode_to_prequant(self, x):$/;"	m	class:VQModel
+encode_with_pretrained	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def encode_with_pretrained(self,x):$/;"	m	class:FirstStagePostProcessor
+equals	plug-and-play/ldm/modules/x_transformer.py	/^def equals(val):$/;"	f
+exists	plug-and-play/ldm/modules/attention.py	/^def exists(val):$/;"	f
+exists	plug-and-play/ldm/modules/x_transformer.py	/^def exists(val):$/;"	f
+exists	plug-and-play/ldm/util.py	/^def exists(x):$/;"	f
+extract_features	plug-and-play/predict.py	/^def extract_features(model, opt, exp_config):$/;"	f
+extract_into_tensor	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def extract_into_tensor(a, t, x_shape):$/;"	f
+extract_latents	preprocess.py	/^    def extract_latents(self, num_steps, data_path, save_path, timesteps_to_save,$/;"	m	class:Preprocess
+extract_latents	preprocess_xl.py	/^    def extract_latents(self, num_steps, data_path, save_path, timesteps_to_save,$/;"	m	class:Preprocess
+find_deformed_coords	attention_xl.py	/^    def find_deformed_coords(self) -> torch.Tensor:$/;"	m	class:MeshDeformator
+find_deformed_coords	pnp_utils.py	/^    def find_deformed_coords(self) -> torch.Tensor:$/;"	m	class:MeshDeformator
+find_in_interval	plug-and-play/ldm/lr_scheduler.py	/^    def find_in_interval(self, n):$/;"	m	class:LambdaWarmUpCosineScheduler2
+find_weights	attention_xl.py	/^    def find_weights(self, $/;"	m	class:MeshDeformator
+find_weights	pnp_utils.py	/^    def find_weights(self, $/;"	m	class:MeshDeformator
+forward	attention.py	/^            def forward(x, encoder_hidden_states=None, attention_mask=None):$/;"	f	function:StableDiffusion.register_attention.sa_forward
+forward	attention_xl.py	/^            def forward(x, encoder_hidden_states=None, attention_mask=None):$/;"	f	function:StableDiffusion.register_attention.sa_forward
+forward	plug-and-play/ldm/models/autoencoder.py	/^    def forward(self, input, return_pred_indices=False):$/;"	m	class:VQModel
+forward	plug-and-play/ldm/models/autoencoder.py	/^    def forward(self, input, sample_posterior=True):$/;"	m	class:AutoencoderKL
+forward	plug-and-play/ldm/models/autoencoder.py	/^    def forward(self, x, *args, **kwargs):$/;"	m	class:IdentityFirstStage
+forward	plug-and-play/ldm/models/diffusion/classifier.py	/^    def forward(self, x_noisy, t, *args, **kwargs):$/;"	m	class:NoisyLatentImageClassifier
+forward	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def forward(self, x, *args, **kwargs):$/;"	m	class:DDPM
+forward	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def forward(self, x, c, *args, **kwargs):$/;"	m	class:LatentDiffusion
+forward	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def forward(self,$/;"	m	class:DiffusionWrapper
+forward	plug-and-play/ldm/modules/attention.py	/^    def forward(self, x):$/;"	m	class:FeedForward
+forward	plug-and-play/ldm/modules/attention.py	/^    def forward(self, x):$/;"	m	class:GEGLU
+forward	plug-and-play/ldm/modules/attention.py	/^    def forward(self, x):$/;"	m	class:LinearAttention
+forward	plug-and-play/ldm/modules/attention.py	/^    def forward(self, x):$/;"	m	class:SpatialSelfAttention
+forward	plug-and-play/ldm/modules/attention.py	/^    def forward(self,$/;"	m	class:BasicTransformerBlock
+forward	plug-and-play/ldm/modules/attention.py	/^    def forward(self,$/;"	m	class:CrossAttention
+forward	plug-and-play/ldm/modules/attention.py	/^    def forward(self,$/;"	m	class:SpatialTransformer
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x):$/;"	m	class:AttnBlock
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x):$/;"	m	class:Downsample
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x):$/;"	m	class:Encoder
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x):$/;"	m	class:LatentRescaler
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x):$/;"	m	class:MergedRescaleDecoder
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x):$/;"	m	class:MergedRescaleEncoder
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x):$/;"	m	class:SimpleDecoder
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x):$/;"	m	class:Upsample
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x):$/;"	m	class:UpsampleDecoder
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x):$/;"	m	class:Upsampler
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x, scale_factor=1.0):$/;"	m	class:Resize
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x, t=None, context=None):$/;"	m	class:Model
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, x, temb):$/;"	m	class:ResnetBlock
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self, z):$/;"	m	class:Decoder
+forward	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def forward(self,x):$/;"	m	class:FirstStagePostProcessor
+forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def forward(self, qkv):$/;"	m	class:QKVAttention
+forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def forward(self, qkv):$/;"	m	class:QKVAttentionLegacy
+forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def forward(self, x):$/;"	m	class:AttentionBlock
+forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def forward(self, x):$/;"	m	class:AttentionPool2d
+forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def forward(self, x):$/;"	m	class:Downsample
+forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def forward(self, x):$/;"	m	class:Upsample
+forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def forward(self, x, emb):$/;"	m	class:TimestepBlock
+forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def forward(self, x, emb, out_layers_injected=None):$/;"	m	class:ResBlock
+forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def forward(self, x, timesteps):$/;"	m	class:EncoderUNetModel
+forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def forward(self,$/;"	m	class:TimestepEmbedSequential
+forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def forward(self,$/;"	m	class:UNetModel
+forward	plug-and-play/ldm/modules/diffusionmodules/openaimodel.py	/^    def forward(self,x):$/;"	m	class:TransposedUpsample
+forward	plug-and-play/ldm/modules/diffusionmodules/util.py	/^    def forward(ctx, run_function, length, *args):$/;"	m	class:CheckpointFunction
+forward	plug-and-play/ldm/modules/diffusionmodules/util.py	/^    def forward(self, c_concat, c_crossattn):$/;"	m	class:HybridConditioner
+forward	plug-and-play/ldm/modules/diffusionmodules/util.py	/^    def forward(self, x):$/;"	m	class:GroupNorm32
+forward	plug-and-play/ldm/modules/diffusionmodules/util.py	/^    def forward(self, x):$/;"	m	class:SiLU
+forward	plug-and-play/ldm/modules/ema.py	/^    def forward(self,model):$/;"	m	class:LitEma
+forward	plug-and-play/ldm/modules/encoders/modules.py	/^    def forward(self, batch, key=None):$/;"	m	class:ClassEmbedder
+forward	plug-and-play/ldm/modules/encoders/modules.py	/^    def forward(self, text):$/;"	m	class:BERTEmbedder
+forward	plug-and-play/ldm/modules/encoders/modules.py	/^    def forward(self, text):$/;"	m	class:BERTTokenizer
+forward	plug-and-play/ldm/modules/encoders/modules.py	/^    def forward(self, text):$/;"	m	class:FrozenCLIPEmbedder
+forward	plug-and-play/ldm/modules/encoders/modules.py	/^    def forward(self, text):$/;"	m	class:FrozenCLIPTextEmbedder
+forward	plug-and-play/ldm/modules/encoders/modules.py	/^    def forward(self, tokens):$/;"	m	class:TransformerEmbedder
+forward	plug-and-play/ldm/modules/encoders/modules.py	/^    def forward(self, x):$/;"	m	class:FrozenClipImageEmbedder
+forward	plug-and-play/ldm/modules/encoders/modules.py	/^    def forward(self,x):$/;"	m	class:SpatialRescaler
+forward	plug-and-play/ldm/modules/losses/contperceptual.py	/^    def forward(self, inputs, reconstructions, posteriors, optimizer_idx,$/;"	m	class:LPIPSWithDiscriminator
+forward	plug-and-play/ldm/modules/losses/vqperceptual.py	/^    def forward(self, codebook_loss, inputs, reconstructions, optimizer_idx,$/;"	m	class:VQLPIPSWithDiscriminator
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward($/;"	m	class:Attention
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward($/;"	m	class:AttentionLayers
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward($/;"	m	class:TransformerWrapper
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward(self, x):$/;"	m	class:AbsolutePositionalEmbedding
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward(self, x):$/;"	m	class:FeedForward
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward(self, x):$/;"	m	class:GEGLU
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward(self, x):$/;"	m	class:RMSNorm
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward(self, x):$/;"	m	class:ScaleNorm
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward(self, x, **kwargs):$/;"	m	class:Rezero
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward(self, x, **kwargs):$/;"	m	class:Scale
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward(self, x, residual):$/;"	m	class:GRUGating
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward(self, x, residual):$/;"	m	class:Residual
+forward	plug-and-play/ldm/modules/x_transformer.py	/^    def forward(self, x, seq_dim=1, offset=0):$/;"	m	class:FixedPositionalEmbedding
+forward	pnp_utils.py	/^        def forward(input_tensor, temb):$/;"	f	function:register_conv_control_efficient.conv_forward
+forward	pnp_utils.py	/^        def forward(x, encoder_hidden_states=None, attention_mask=None):$/;"	f	function:register_attention.sa_forward
+freeze	plug-and-play/ldm/modules/encoders/modules.py	/^    def freeze(self):$/;"	m	class:FrozenCLIPEmbedder
+freeze	plug-and-play/ldm/modules/encoders/modules.py	/^    def freeze(self):$/;"	m	class:FrozenCLIPTextEmbedder
+fspecial	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def fspecial(filter_type, *args, **kwargs):$/;"	f
+fspecial	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def fspecial(filter_type, *args, **kwargs):$/;"	f
+fspecial_gaussian	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def fspecial_gaussian(hsize, sigma):$/;"	f
+fspecial_gaussian	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def fspecial_gaussian(hsize, sigma):$/;"	f
+fspecial_laplacian	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def fspecial_laplacian(alpha):$/;"	f
+fspecial_laplacian	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def fspecial_laplacian(alpha):$/;"	f
+gen_kernel	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def gen_kernel(k_size=np.array([15, 15]), scale_factor=np.array([4, 4]), min_var=0.6, max_var=10., noise_level=0):$/;"	f
+gen_kernel	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def gen_kernel(k_size=np.array([15, 15]), scale_factor=np.array([4, 4]), min_var=0.6, max_var=10., noise_level=0):$/;"	f
+get_conditioning	plug-and-play/ldm/models/diffusion/classifier.py	/^    def get_conditioning(self, batch, k=None):$/;"	m	class:NoisyLatentImageClassifier
+get_data	pnp.py	/^    def get_data(self):$/;"	m	class:PNP
+get_data	pnp_xl.py	/^    def get_data(self):$/;"	m	class:PNP
+get_first_stage_encoding	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def get_first_stage_encoding(self, encoder_posterior):$/;"	m	class:LatentDiffusion
+get_fold_unfold	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def get_fold_unfold(self, x, kernel_size, stride, uf=1, df=1):  # todo load once not every time, shorten code$/;"	m	class:LatentDiffusion
+get_image_paths	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def get_image_paths(dataroot):$/;"	f
+get_input	plug-and-play/ldm/models/autoencoder.py	/^    def get_input(self, batch, k):$/;"	m	class:AutoencoderKL
+get_input	plug-and-play/ldm/models/autoencoder.py	/^    def get_input(self, batch, k):$/;"	m	class:VQModel
+get_input	plug-and-play/ldm/models/diffusion/classifier.py	/^    def get_input(self, batch, k):$/;"	m	class:NoisyLatentImageClassifier
+get_input	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def get_input(self, batch, k):$/;"	m	class:DDPM
+get_input	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def get_input(self, batch, k, return_first_stage_outputs=False, force_c_encode=False,$/;"	m	class:LatentDiffusion
+get_last_layer	plug-and-play/ldm/models/autoencoder.py	/^    def get_last_layer(self):$/;"	m	class:AutoencoderKL
+get_last_layer	plug-and-play/ldm/models/autoencoder.py	/^    def get_last_layer(self):$/;"	m	class:VQModel
+get_last_layer	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def get_last_layer(self):$/;"	m	class:Model
+get_learned_conditioning	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def get_learned_conditioning(self, c):$/;"	m	class:LatentDiffusion
+get_loss	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def get_loss(self, pred, target, mean=True):$/;"	m	class:DDPM
+get_model_output	plug-and-play/ldm/models/diffusion/plms.py	/^        def get_model_output(x, t):$/;"	f	function:PLMSSampler.p_sample_plms
+get_obj_from_str	plug-and-play/ldm/util.py	/^def get_obj_from_str(string, reload=False):$/;"	f
+get_text_embeds	pnp.py	/^    def get_text_embeds(self, prompt, negative_prompt, batch_size=1):$/;"	m	class:PNP
+get_text_embeds	pnp_xl.py	/^    def get_text_embeds(self, prompt, negative_prompt, batch_size=1):$/;"	m	class:PNP
+get_text_embeds	preprocess.py	/^    def get_text_embeds(self, prompt, negative_prompt, device="cuda"):$/;"	m	class:Preprocess
+get_text_embeds	preprocess_xl.py	/^    def get_text_embeds(self, prompt, negative_prompt, device="cuda"):$/;"	m	class:Preprocess
+get_timestamp	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def get_timestamp():$/;"	f
+get_timestep_embedding	plug-and-play/ldm/modules/diffusionmodules/model.py	/^def get_timestep_embedding(timesteps, embedding_dim):$/;"	f
+get_timesteps	preprocess.py	/^def get_timesteps(scheduler, num_inference_steps, strength, device):$/;"	f
+get_timesteps	preprocess_xl.py	/^def get_timesteps(scheduler, num_inference_steps, strength, device):$/;"	f
+get_weighting	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def get_weighting(self, h, w, Ly, Lx, device):$/;"	m	class:LatentDiffusion
+get_x_noisy	plug-and-play/ldm/models/diffusion/classifier.py	/^    def get_x_noisy(self, x, t, noise=None):$/;"	m	class:NoisyLatentImageClassifier
+get_x_prev_and_pred_x0	plug-and-play/ldm/models/diffusion/plms.py	/^        def get_x_prev_and_pred_x0(e_t, index):$/;"	f	function:PLMSSampler.p_sample_plms
+gm_blur_kernel	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def gm_blur_kernel(mean, cov, size=15):$/;"	f
+gm_blur_kernel	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def gm_blur_kernel(mean, cov, size=15):$/;"	f
+group_by_key_prefix	plug-and-play/ldm/modules/x_transformer.py	/^def group_by_key_prefix(prefix, d):$/;"	f
+group_dict_by_key	plug-and-play/ldm/modules/x_transformer.py	/^def group_dict_by_key(cond, d):$/;"	f
+groupby_prefix_and_trim	plug-and-play/ldm/modules/x_transformer.py	/^def groupby_prefix_and_trim(prefix, d):$/;"	f
+h	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^	h = img.shape[0] \/\/ 4$/;"	v
+h	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^    h = img.shape[0] \/\/ 4$/;"	v
+help	preprocess.py	/^                        help="stable diffusion version")$/;"	v
+help	preprocess_xl.py	/^                        help="stable diffusion version")$/;"	v
+hinge_d_loss_with_exemplar_weights	plug-and-play/ldm/modules/losses/vqperceptual.py	/^def hinge_d_loss_with_exemplar_weights(logits_real, logits_fake, weights):$/;"	f
+img	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^	img = img[:448, :448]$/;"	v
+img	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^	img = util.imread_uint('utils\/test.png', 3)$/;"	v
+img	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^	img = util.uint2single(img)$/;"	v
+img	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^    img = img[:448, :448]$/;"	v
+img	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^    img = util.imread_uint('utils\/test.png', 3)$/;"	v
+img_concat	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^		img_concat = np.concatenate([lq_bicubic_nearest, lq_nearest, util.single2uint(img_hq)], axis=1)$/;"	v
+img_concat	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^        img_concat = np.concatenate([lq_bicubic_nearest, lq_nearest, util.single2uint(img_hq)], axis=1)$/;"	v
+img_hq	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^        img_hq = img$/;"	v
+img_lq	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^		img_lq = deg_fn(img)$/;"	v
+img_lq	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^        img_lq = deg_fn(img)["image"]$/;"	v
+img_lq_bicubic	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^		img_lq_bicubic = albumentations.SmallestMaxSize(max_size=h, interpolation=cv2.INTER_CUBIC)(image=img)["image"]$/;"	v
+img_lq_bicubic	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^        img_lq_bicubic = albumentations.SmallestMaxSize(max_size=h, interpolation=cv2.INTER_CUBIC)(image=img_hq)["image"]$/;"	v
+imread_uint	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def imread_uint(path, n_channels=3):$/;"	f
+imresize	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def imresize(img, scale, antialiasing=True):$/;"	f
+imresize_np	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def imresize_np(img, scale, antialiasing=True):$/;"	f
+imsave	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def imsave(img, img_path):$/;"	f
+imshow	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def imshow(x, title=None, cbar=False, figsize=None):$/;"	f
+imssave	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def imssave(imgs, img_path):$/;"	f
+imwrite	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def imwrite(img, img_path):$/;"	f
+init_	plug-and-play/ldm/modules/attention.py	/^def init_(tensor):$/;"	f
+init_	plug-and-play/ldm/modules/x_transformer.py	/^    def init_(self):$/;"	m	class:AbsolutePositionalEmbedding
+init_	plug-and-play/ldm/modules/x_transformer.py	/^    def init_(self):$/;"	m	class:TransformerWrapper
+init_from_ckpt	plug-and-play/ldm/models/autoencoder.py	/^    def init_from_ckpt(self, path, ignore_keys=list()):$/;"	m	class:AutoencoderKL
+init_from_ckpt	plug-and-play/ldm/models/autoencoder.py	/^    def init_from_ckpt(self, path, ignore_keys=list()):$/;"	m	class:VQModel
+init_from_ckpt	plug-and-play/ldm/models/diffusion/classifier.py	/^    def init_from_ckpt(self, path, ignore_keys=list(), only_model=False):$/;"	m	class:NoisyLatentImageClassifier
+init_from_ckpt	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def init_from_ckpt(self, path, ignore_keys=list(), only_model=False):$/;"	m	class:DDPM
+init_pnp	pnp.py	/^    def init_pnp(self, $/;"	m	class:PNP
+init_pnp	pnp_xl.py	/^    def init_pnp(self, conv_injection_t, qk_injection_t):$/;"	m	class:PNP
+inner	plug-and-play/ldm/modules/x_transformer.py	/^    def inner(*args, **kwargs):$/;"	f	function:always
+inner	plug-and-play/ldm/modules/x_transformer.py	/^    def inner(x):$/;"	f	function:equals
+inner	plug-and-play/ldm/modules/x_transformer.py	/^    def inner(x):$/;"	f	function:not_equals
+install_requires	plug-and-play/setup.py	/^    install_requires=[$/;"	v
+instantiate_cond_stage	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def instantiate_cond_stage(self, config):$/;"	m	class:LatentDiffusion
+instantiate_first_stage	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def instantiate_first_stage(self, config):$/;"	m	class:LatentDiffusion
+instantiate_from_config	plug-and-play/ldm/util.py	/^def instantiate_from_config(config):$/;"	f
+instantiate_pretrained	plug-and-play/ldm/modules/diffusionmodules/model.py	/^    def instantiate_pretrained(self, config):$/;"	m	class:FirstStagePostProcessor
+interpolation	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^		                        interpolation=0)$/;"	v
+interpolation	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^                                        interpolation=0)$/;"	v
+interpolation	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^                                interpolation=0)$/;"	v
+is_image_file	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def is_image_file(filename):$/;"	f
+isimage	plug-and-play/ldm/util.py	/^def isimage(x):$/;"	f
+ismap	plug-and-play/ldm/util.py	/^def ismap(x):$/;"	f
+kl	plug-and-play/ldm/modules/distributions/distributions.py	/^    def kl(self, other=None):$/;"	m	class:DiagonalGaussianDistribution
+l1	plug-and-play/ldm/modules/losses/vqperceptual.py	/^def l1(x, y):$/;"	f
+l2	plug-and-play/ldm/modules/losses/vqperceptual.py	/^def l2(x, y):$/;"	f
+linear	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def linear(*args, **kwargs):$/;"	f
+load_classifier	plug-and-play/ldm/models/diffusion/classifier.py	/^    def load_classifier(self, ckpt_path, pool):$/;"	m	class:NoisyLatentImageClassifier
+load_diffusion	plug-and-play/ldm/models/diffusion/classifier.py	/^    def load_diffusion(self):$/;"	m	class:NoisyLatentImageClassifier
+load_experiments_features	plug-and-play/run_features_pca.py	/^def load_experiments_features(feature_maps_paths, block, feature_type, t):$/;"	f
+load_experiments_self_attn_maps	plug-and-play/run_self_attn_pca.py	/^def load_experiments_self_attn_maps(unet_model, feature_map_paths, block, t):$/;"	f
+load_img	plug-and-play/run_features_extraction.py	/^def load_img(path):$/;"	f
+load_img	preprocess.py	/^    def load_img(self, image_path):$/;"	m	class:Preprocess
+load_img	preprocess_xl.py	/^    def load_img(self, image_path):$/;"	m	class:Preprocess
+load_model_from_config	plug-and-play/run_features_extraction.py	/^def load_model_from_config(config, ckpt, verbose=False):$/;"	f
+load_replacement	plug-and-play/pnp_utils.py	/^def load_replacement(x):$/;"	f
+load_source_latents_t	pnp_utils.py	/^def load_source_latents_t(t, latents_path):$/;"	f
+load_target_features	plug-and-play/predict.py	/^    def load_target_features():$/;"	f	function:run_pnp
+load_target_features	plug-and-play/run_pnp.py	/^    def load_target_features():$/;"	f	function:main
+log_images	plug-and-play/ldm/models/autoencoder.py	/^    def log_images(self, batch, only_inputs=False, **kwargs):$/;"	m	class:AutoencoderKL
+log_images	plug-and-play/ldm/models/autoencoder.py	/^    def log_images(self, batch, only_inputs=False, plot_ema=False, **kwargs):$/;"	m	class:VQModel
+log_images	plug-and-play/ldm/models/diffusion/classifier.py	/^    def log_images(self, batch, N=8, *args, **kwargs):$/;"	m	class:NoisyLatentImageClassifier
+log_images	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def log_images(self, batch, N=8, *args, **kwargs):$/;"	m	class:Layout2ImgDiffusion
+log_images	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def log_images(self, batch, N=8, n_row=2, sample=True, return_keys=None, **kwargs):$/;"	m	class:DDPM
+log_images	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def log_images(self, batch, N=8, n_row=4, sample=True, ddim_steps=200, ddim_eta=1., return_keys=None,$/;"	m	class:LatentDiffusion
+log_txt_as_img	plug-and-play/ldm/util.py	/^def log_txt_as_img(wh, xc, size=10):$/;"	f
+lq_bicubic_nearest	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^		lq_bicubic_nearest = cv2.resize(util.single2uint(img_lq_bicubic), (int(sf * img_lq.shape[1]), int(sf * img_lq.shape[0])),$/;"	v
+lq_bicubic_nearest	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^        lq_bicubic_nearest = cv2.resize(util.single2uint(img_lq_bicubic),$/;"	v
+lq_nearest	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^		lq_nearest = cv2.resize(util.single2uint(img_lq), (int(sf * img_lq.shape[1]), int(sf * img_lq.shape[0])),$/;"	v
+lq_nearest	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^        lq_nearest = cv2.resize(util.single2uint(img_lq), (int(sf * img_lq.shape[1]), int(sf * img_lq.shape[0])),$/;"	v
+main	attention.py	/^def main():$/;"	f
+main	attention_xl.py	/^def main():$/;"	f
+main	plug-and-play/run_features_extraction.py	/^def main():$/;"	f
+main	plug-and-play/run_features_pca.py	/^def main():$/;"	f
+main	plug-and-play/run_pnp.py	/^def main():$/;"	f
+main	plug-and-play/run_self_attn_pca.py	/^def main():$/;"	f
+main	pnp.py	/^def main():$/;"	f
+make_attn	plug-and-play/ldm/modules/diffusionmodules/model.py	/^def make_attn(in_channels, attn_type="vanilla"):$/;"	f
+make_beta_schedule	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def make_beta_schedule(schedule, n_timestep, linear_start=1e-4, linear_end=2e-2, cosine_s=8e-3):$/;"	f
+make_cond_schedule	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def make_cond_schedule(self, ):$/;"	m	class:LatentDiffusion
+make_ddim_sampling_parameters	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def make_ddim_sampling_parameters(alphacums, ddim_timesteps, eta, verbose=True):$/;"	f
+make_ddim_timesteps	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def make_ddim_timesteps(ddim_discr_method, num_ddim_timesteps, num_ddpm_timesteps, verbose=True, strength = 1.):$/;"	f
+make_negative_prompt_schedule	plug-and-play/ldm/models/diffusion/ddim.py	/^    def make_negative_prompt_schedule(self, negative_prompt_schedule, negative_prompt_alpha, total_steps):$/;"	m	class:DDIMSampler
+make_schedule	plug-and-play/ldm/models/diffusion/ddim.py	/^    def make_schedule(self, ddim_num_steps, ddim_discretize="uniform", ddim_eta=0., verbose=True, strength = 1.):$/;"	m	class:DDIMSampler
+make_schedule	plug-and-play/ldm/models/diffusion/plms.py	/^    def make_schedule(self, ddim_num_steps, ddim_discretize="uniform", ddim_eta=0., verbose=True):$/;"	m	class:PLMSSampler
+make_sh_args_str_from_args	plug-and-play/ldm/util.py	/^def make_sh_args_str_from_args(args):$/;"	f
+max_neg_value	plug-and-play/ldm/modules/attention.py	/^def max_neg_value(t):$/;"	f
+max_neg_value	plug-and-play/ldm/modules/x_transformer.py	/^def max_neg_value(tensor):$/;"	f
+mean_flat	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def mean_flat(tensor):$/;"	f
+mean_flat	plug-and-play/ldm/util.py	/^def mean_flat(tensor):$/;"	f
+measure_perplexity	plug-and-play/ldm/modules/losses/vqperceptual.py	/^def measure_perplexity(predicted_indices, n_embed):$/;"	f
+meshgrid	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def meshgrid(self, h, w):$/;"	m	class:LatentDiffusion
+mkdir	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def mkdir(path):$/;"	f
+mkdir_and_rename	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def mkdir_and_rename(path):$/;"	f
+mkdirs	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def mkdirs(paths):$/;"	f
+modcrop	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def modcrop(img_in, scale):$/;"	f
+modcrop_np	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def modcrop_np(img, sf):$/;"	f
+modcrop_np	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def modcrop_np(img, sf):$/;"	f
+mode	plug-and-play/ldm/modules/distributions/distributions.py	/^    def mode(self):$/;"	m	class:AbstractDistribution
+mode	plug-and-play/ldm/modules/distributions/distributions.py	/^    def mode(self):$/;"	m	class:DiagonalGaussianDistribution
+mode	plug-and-play/ldm/modules/distributions/distributions.py	/^    def mode(self):$/;"	m	class:DiracDistribution
+model	plug-and-play/ldm/modules/encoders/modules.py	/^    model = FrozenCLIPEmbedder()$/;"	v
+name	plug-and-play/setup.py	/^    name='latent-diffusion',$/;"	v
+nll	plug-and-play/ldm/modules/distributions/distributions.py	/^    def nll(self, sample, dims=[1,2,3]):$/;"	m	class:DiagonalGaussianDistribution
+noise_like	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def noise_like(shape, device, repeat=False):$/;"	f
+nonlinearity	plug-and-play/ldm/modules/diffusionmodules/model.py	/^def nonlinearity(x):$/;"	f
+normal_kl	plug-and-play/ldm/modules/distributions/distributions.py	/^def normal_kl(mean1, logvar1, mean2, logvar2):$/;"	f
+normalization	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def normalization(channels):$/;"	f
+not_equals	plug-and-play/ldm/modules/x_transformer.py	/^def not_equals(val):$/;"	f
+numpy_to_pil	plug-and-play/pnp_utils.py	/^def numpy_to_pil(images):$/;"	f
+on_train_batch_end	plug-and-play/ldm/models/autoencoder.py	/^    def on_train_batch_end(self, *args, **kwargs):$/;"	m	class:VQModel
+on_train_batch_end	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def on_train_batch_end(self, *args, **kwargs):$/;"	m	class:DDPM
+on_train_batch_start	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def on_train_batch_start(self, batch, batch_idx, dataloader_idx):$/;"	m	class:LatentDiffusion
+on_train_epoch_start	plug-and-play/ldm/models/diffusion/classifier.py	/^    def on_train_epoch_start(self):$/;"	m	class:NoisyLatentImageClassifier
+on_validation_start	plug-and-play/ldm/models/diffusion/classifier.py	/^    def on_validation_start(self):$/;"	m	class:NoisyLatentImageClassifier
+opt	pnp_xl.py	/^    opt = parser.parse_args()$/;"	v	class:PNP
+opt	preprocess.py	/^    opt = parser.parse_args()$/;"	v
+opt	preprocess_xl.py	/^    opt = parser.parse_args()$/;"	v
+p_losses	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def p_losses(self, x_start, cond, t, noise=None):$/;"	m	class:LatentDiffusion
+p_losses	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def p_losses(self, x_start, t, noise=None):$/;"	m	class:DDPM
+p_mean_variance	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def p_mean_variance(self, x, c, t, clip_denoised: bool, return_codebook_ids=False, quantize_denoised=False,$/;"	m	class:LatentDiffusion
+p_mean_variance	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def p_mean_variance(self, x, t, clip_denoised: bool):$/;"	m	class:DDPM
+p_sample	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def p_sample(self, x, c, t, clip_denoised=False, repeat_noise=False,$/;"	m	class:LatentDiffusion
+p_sample	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def p_sample(self, x, t, clip_denoised=True, repeat_noise=False):$/;"	m	class:DDPM
+p_sample_ddim	plug-and-play/ldm/models/diffusion/ddim.py	/^    def p_sample_ddim(self, x, c, t, index, negative_conditioning=None,$/;"	m	class:DDIMSampler
+p_sample_loop	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def p_sample_loop(self, cond, shape, return_intermediates=False,$/;"	m	class:LatentDiffusion
+p_sample_loop	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def p_sample_loop(self, shape, return_intermediates=False):$/;"	m	class:DDPM
+p_sample_plms	plug-and-play/ldm/models/diffusion/plms.py	/^    def p_sample_plms(self, x, c, t, index, repeat_noise=False, use_original_steps=False, quantize_denoised=False,$/;"	m	class:PLMSSampler
+packages	plug-and-play/setup.py	/^    packages=find_packages(),$/;"	v
+parallel_data_prefetch	plug-and-play/ldm/util.py	/^def parallel_data_prefetch($/;"	f
+parser	attention.py	/^parser = argparse.ArgumentParser()$/;"	v
+parser	attention_xl.py	/^parser = argparse.ArgumentParser()$/;"	v
+parser	pnp_xl.py	/^    parser = argparse.ArgumentParser()$/;"	v	class:PNP
+parser	preprocess.py	/^    parser = argparse.ArgumentParser()$/;"	v
+parser	preprocess_xl.py	/^    parser = argparse.ArgumentParser()$/;"	v
+patches_from_image	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def patches_from_image(img, p_size=512, p_overlap=64, p_max=800):$/;"	f
+pick_and_pop	plug-and-play/ldm/modules/x_transformer.py	/^def pick_and_pop(keys, d):$/;"	f
+plms_sampling	plug-and-play/ldm/models/diffusion/plms.py	/^    def plms_sampling(self, cond, shape,$/;"	m	class:PLMSSampler
+pnp	pnp_xl.py	/^    pnp = PNP(config)$/;"	v	class:PNP
+predict	plug-and-play/predict.py	/^    def predict($/;"	m	class:Predictor
+predict_start_from_noise	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def predict_start_from_noise(self, x_t, t, noise):$/;"	m	class:DDPM
+preprocess	plug-and-play/ldm/modules/encoders/modules.py	/^    def preprocess(self, x):$/;"	m	class:FrozenClipImageEmbedder
+progressive_denoising	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def progressive_denoising(self, cond, shape, verbose=True, callback=None, quantize_denoised=False,$/;"	m	class:LatentDiffusion
+q_mean_variance	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def q_mean_variance(self, x_start, t):$/;"	m	class:DDPM
+q_posterior	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def q_posterior(self, x_start, x_t, t):$/;"	m	class:DDPM
+q_sample	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def q_sample(self, x_start, t, noise=None):$/;"	m	class:DDPM
+quantize	plug-and-play/ldm/models/autoencoder.py	/^    def quantize(self, x, *args, **kwargs):$/;"	m	class:IdentityFirstStage
+random_crop	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def random_crop(lq, hq, sf=4, lq_patchsize=64):$/;"	f
+random_crop	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def random_crop(lq, hq, sf=4, lq_patchsize=64):$/;"	f
+read_img	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def read_img(path):$/;"	f
+register_attention	attention.py	/^    def register_attention(self, $/;"	m	class:StableDiffusion
+register_attention	attention_xl.py	/^    def register_attention(self, $/;"	m	class:StableDiffusion
+register_attention	pnp_utils.py	/^def register_attention(model, $/;"	f
+register_buffer	plug-and-play/ldm/models/diffusion/ddim.py	/^    def register_buffer(self, name, attr):$/;"	m	class:DDIMSampler
+register_buffer	plug-and-play/ldm/models/diffusion/plms.py	/^    def register_buffer(self, name, attr):$/;"	m	class:PLMSSampler
+register_conv_control_efficient	pnp_utils.py	/^def register_conv_control_efficient(model, $/;"	f
+register_schedule	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def register_schedule(self, given_betas=None, beta_schedule="linear", timesteps=1000,$/;"	m	class:DDPM
+register_schedule	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def register_schedule(self,$/;"	m	class:LatentDiffusion
+register_time	attention.py	/^    def register_time(self, t):$/;"	m	class:StableDiffusion
+register_time	attention_xl.py	/^    def register_time(self, t):$/;"	m	class:StableDiffusion
+register_time	pnp_utils.py	/^def register_time(model, t):$/;"	f
+rescale_bbox	plug-and-play/ldm/models/diffusion/ddpm.py	/^        def rescale_bbox(bbox):$/;"	f	function:LatentDiffusion._rescale_annotations
+reset_noise_accs	plug-and-play/ldm/models/diffusion/classifier.py	/^    def reset_noise_accs(self):$/;"	m	class:NoisyLatentImageClassifier
+restore	plug-and-play/ldm/modules/ema.py	/^    def restore(self, parameters):$/;"	m	class:LitEma
+reverse_ddim	plug-and-play/ldm/models/diffusion/ddim.py	/^    def reverse_ddim(self, x, t,t_next, c=None, quantize_denoised=False, unconditional_guidance_scale=1.,$/;"	m	class:DDIMSampler
+rgb2ycbcr	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def rgb2ycbcr(img, only_y=True):$/;"	f
+run	preprocess.py	/^def run(opt):$/;"	f
+run	preprocess_xl.py	/^def run(opt):$/;"	f
+run_pnp	plug-and-play/predict.py	/^def run_pnp(model, opt, exp_config):$/;"	f
+run_pnp	pnp.py	/^    def run_pnp(self, handles, targets):$/;"	m	class:PNP
+run_pnp	pnp_xl.py	/^    def run_pnp(self):$/;"	m	class:PNP
+sa_forward	attention.py	/^        def sa_forward(module):$/;"	f	function:StableDiffusion.register_attention
+sa_forward	attention_xl.py	/^        def sa_forward(module):$/;"	f	function:StableDiffusion.register_attention
+sa_forward	pnp_utils.py	/^    def sa_forward(self):$/;"	f	function:register_attention
+safety_checker	plug-and-play/pnp_utils.py	/^safety_checker = StableDiffusionSafetyChecker.from_pretrained(safety_model_id)$/;"	v
+safety_feature_extractor	plug-and-play/pnp_utils.py	/^safety_feature_extractor = AutoFeatureExtractor.from_pretrained(safety_model_id)$/;"	v
+safety_model_id	plug-and-play/pnp_utils.py	/^safety_model_id = "CompVis\/stable-diffusion-safety-checker"$/;"	v
+sample	plug-and-play/ldm/models/diffusion/ddim.py	/^    def sample(self,$/;"	m	class:DDIMSampler
+sample	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def sample(self, batch_size=16, return_intermediates=False):$/;"	m	class:DDPM
+sample	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def sample(self, cond, batch_size=16, return_intermediates=False, x_T=None,$/;"	m	class:LatentDiffusion
+sample	plug-and-play/ldm/models/diffusion/plms.py	/^    def sample(self,$/;"	m	class:PLMSSampler
+sample	plug-and-play/ldm/modules/distributions/distributions.py	/^    def sample(self):$/;"	m	class:AbstractDistribution
+sample	plug-and-play/ldm/modules/distributions/distributions.py	/^    def sample(self):$/;"	m	class:DiagonalGaussianDistribution
+sample	plug-and-play/ldm/modules/distributions/distributions.py	/^    def sample(self):$/;"	m	class:DiracDistribution
+sample_log	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def sample_log(self,cond,batch_size,ddim, ddim_steps,**kwargs):$/;"	m	class:LatentDiffusion
+sample_loop	pnp.py	/^    def sample_loop(self, x):$/;"	m	class:PNP
+sample_loop	pnp_xl.py	/^    def sample_loop(self, x):$/;"	m	class:PNP
+save_feature_map	plug-and-play/predict.py	/^    def save_feature_map(feature_map, filename):$/;"	f	function:extract_features
+save_feature_map	plug-and-play/run_features_extraction.py	/^    def save_feature_map(feature_map, filename):$/;"	f	function:main
+save_feature_maps	plug-and-play/predict.py	/^    def save_feature_maps(blocks, i, feature_type="input_block"):$/;"	f	function:extract_features
+save_feature_maps	plug-and-play/run_features_extraction.py	/^    def save_feature_maps(blocks, i, feature_type="input_block"):$/;"	f	function:main
+save_feature_maps_callback	plug-and-play/predict.py	/^    def save_feature_maps_callback(i):$/;"	f	function:extract_features
+save_feature_maps_callback	plug-and-play/run_features_extraction.py	/^    def save_feature_maps_callback(i):$/;"	f	function:main
+save_sampled_img	plug-and-play/predict.py	/^    def save_sampled_img(x, i, save_path):$/;"	f	function:extract_features
+save_sampled_img	plug-and-play/predict.py	/^    def save_sampled_img(x, i, save_paths):$/;"	f	function:run_pnp
+save_sampled_img	plug-and-play/run_features_extraction.py	/^    def save_sampled_img(x, i, save_path):$/;"	f	function:main
+save_sampled_img	plug-and-play/run_pnp.py	/^    def save_sampled_img(x, i, save_paths):$/;"	f	function:main
+scale_module	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def scale_module(module, scale):$/;"	f
+schedule	plug-and-play/ldm/lr_scheduler.py	/^    def schedule(self, n, **kwargs):$/;"	m	class:LambdaLinearScheduler
+schedule	plug-and-play/ldm/lr_scheduler.py	/^    def schedule(self, n, **kwargs):$/;"	m	class:LambdaWarmUpCosineScheduler
+schedule	plug-and-play/ldm/lr_scheduler.py	/^    def schedule(self, n, **kwargs):$/;"	m	class:LambdaWarmUpCosineScheduler2
+scheduler	attention.py	/^    def scheduler(self):$/;"	m	class:StableDiffusion
+scheduler	attention_xl.py	/^    def scheduler(self):$/;"	m	class:StableDiffusion
+scheduler	preprocess.py	/^    def scheduler(self):$/;"	m	class:Preprocess
+scheduler	preprocess_xl.py	/^    def scheduler(self):$/;"	m	class:Preprocess
+seed_everything	pnp_utils.py	/^def seed_everything(seed):$/;"	f
+setup	plug-and-play/predict.py	/^    def setup(self):$/;"	m	class:Predictor
+sf	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^	sf = 4$/;"	v
+sf	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^    sf = 4$/;"	v
+shared_step	plug-and-play/ldm/models/diffusion/classifier.py	/^    def shared_step(self, batch, t=None):$/;"	m	class:NoisyLatentImageClassifier
+shared_step	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def shared_step(self, batch):$/;"	m	class:DDPM
+shared_step	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def shared_step(self, batch, **kwargs):$/;"	m	class:LatentDiffusion
+shave	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def shave(img_in, border=0):$/;"	f
+shift_pixel	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def shift_pixel(x, sf, upper_left=True):$/;"	f
+shift_pixel	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def shift_pixel(x, sf, upper_left=True):$/;"	f
+single2tensor3	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def single2tensor3(img):$/;"	f
+single2tensor4	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def single2tensor4(img):$/;"	f
+single2tensor5	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def single2tensor5(img):$/;"	f
+single2uint	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def single2uint(img):$/;"	f
+single2uint16	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def single2uint16(img):$/;"	f
+single32tensor5	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def single32tensor5(img):$/;"	f
+single42tensor4	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def single42tensor4(img):$/;"	f
+split_imageset	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def split_imageset(original_dataroot, taget_dataroot, n_channels=3, p_size=800, p_overlap=96, p_max=1000):$/;"	f
+srmd_degradation	plug-and-play/ldm/modules/image_degradation/bsrgan.py	/^def srmd_degradation(x, k, sf=3):$/;"	f
+srmd_degradation	plug-and-play/ldm/modules/image_degradation/bsrgan_light.py	/^def srmd_degradation(x, k, sf=3):$/;"	f
+ssim	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def ssim(img1, img2):$/;"	f
+stochastic_encode	plug-and-play/ldm/models/diffusion/ddim.py	/^    def stochastic_encode(self, x0, t, use_original_steps=False, noise=None):$/;"	m	class:DDIMSampler
+store	plug-and-play/ldm/modules/ema.py	/^    def store(self, parameters):$/;"	m	class:LitEma
+string_begins_with	plug-and-play/ldm/modules/x_transformer.py	/^def string_begins_with(prefix, str):$/;"	f
+surf	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def surf(Z, cmap='rainbow', figsize=None):$/;"	f
+tensor2img	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def tensor2img(tensor, out_type=np.uint8, min_max=(0, 1)):$/;"	f
+tensor2single	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def tensor2single(img):$/;"	f
+tensor2single3	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def tensor2single3(img):$/;"	f
+tensor2uint	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def tensor2uint(img):$/;"	f
+text_encoder	attention.py	/^    def text_encoder(self):$/;"	m	class:StableDiffusion
+text_encoder	attention_xl.py	/^    def text_encoder(self):$/;"	m	class:StableDiffusion
+text_encoder	preprocess.py	/^    def text_encoder(self):$/;"	m	class:Preprocess
+text_encoder	preprocess_xl.py	/^    def text_encoder(self):$/;"	m	class:Preprocess
+timestep_embedding	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def timestep_embedding(timesteps, dim, max_period=10000, repeat_only=False):$/;"	f
+to_rgb	plug-and-play/ldm/models/autoencoder.py	/^    def to_rgb(self, x):$/;"	m	class:AutoencoderKL
+to_rgb	plug-and-play/ldm/models/autoencoder.py	/^    def to_rgb(self, x):$/;"	m	class:VQModel
+to_rgb	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def to_rgb(self, x):$/;"	m	class:LatentDiffusion
+tokenizer	attention.py	/^    def tokenizer(self):$/;"	m	class:StableDiffusion
+tokenizer	attention_xl.py	/^    def tokenizer(self):$/;"	m	class:StableDiffusion
+tokenizer	preprocess.py	/^    def tokenizer(self):$/;"	m	class:Preprocess
+tokenizer	preprocess_xl.py	/^    def tokenizer(self):$/;"	m	class:Preprocess
+training_step	plug-and-play/ldm/models/autoencoder.py	/^    def training_step(self, batch, batch_idx, optimizer_idx):$/;"	m	class:AutoencoderKL
+training_step	plug-and-play/ldm/models/autoencoder.py	/^    def training_step(self, batch, batch_idx, optimizer_idx):$/;"	m	class:VQModel
+training_step	plug-and-play/ldm/models/diffusion/classifier.py	/^    def training_step(self, batch, batch_idx):$/;"	m	class:NoisyLatentImageClassifier
+training_step	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def training_step(self, batch, batch_idx):$/;"	m	class:DDPM
+transform_coordinates	attention_xl.py	/^    def transform_coordinates(self, $/;"	m	class:MeshDeformator
+transform_coordinates	pnp_utils.py	/^    def transform_coordinates(self, $/;"	m	class:MeshDeformator
+uint162single	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def uint162single(img):$/;"	f
+uint2single	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def uint2single(img):$/;"	f
+uint2tensor3	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def uint2tensor3(img):$/;"	f
+uint2tensor4	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def uint2tensor4(img):$/;"	f
+unet	attention.py	/^    def unet(self):$/;"	m	class:StableDiffusion
+unet	attention_xl.py	/^    def unet(self):$/;"	m	class:StableDiffusion
+unet	preprocess.py	/^    def unet(self):$/;"	m	class:Preprocess
+unet	preprocess_xl.py	/^    def unet(self):$/;"	m	class:Preprocess
+uniform_on_device	plug-and-play/ldm/models/diffusion/ddpm.py	/^def uniform_on_device(r1, r2, shape, device):$/;"	f
+uniq	plug-and-play/ldm/modules/attention.py	/^def uniq(arr):$/;"	f
+vae	attention.py	/^    def vae(self):$/;"	m	class:StableDiffusion
+vae	attention_xl.py	/^    def vae(self):$/;"	m	class:StableDiffusion
+vae	preprocess.py	/^    def vae(self):$/;"	m	class:Preprocess
+vae	preprocess_xl.py	/^    def vae(self):$/;"	m	class:Preprocess
+validation_step	plug-and-play/ldm/models/autoencoder.py	/^    def validation_step(self, batch, batch_idx):$/;"	m	class:AutoencoderKL
+validation_step	plug-and-play/ldm/models/autoencoder.py	/^    def validation_step(self, batch, batch_idx):$/;"	m	class:VQModel
+validation_step	plug-and-play/ldm/models/diffusion/classifier.py	/^    def validation_step(self, batch, batch_idx):$/;"	m	class:NoisyLatentImageClassifier
+validation_step	plug-and-play/ldm/models/diffusion/ddpm.py	/^    def validation_step(self, batch, batch_idx):$/;"	m	class:DDPM
+version	plug-and-play/setup.py	/^    version='0.0.1',$/;"	v
+visualize	attention.py	/^    def visualize(self, self_attn_map):$/;"	m	class:StableDiffusion
+visualize	attention_xl.py	/^    def visualize(self, self_attn_map):$/;"	m	class:StableDiffusion
+visualize_and_save_features_pca	plug-and-play/pnp_utils.py	/^def visualize_and_save_features_pca(feature_maps_fit_data,feature_maps_transform_data, transform_experiments, t, save_dir):$/;"	f
+write_logs	plug-and-play/ldm/models/diffusion/classifier.py	/^    def write_logs(self, loss, logits, targets):$/;"	m	class:NoisyLatentImageClassifier
+ycbcr2rgb	plug-and-play/ldm/modules/image_degradation/utils_image.py	/^def ycbcr2rgb(img):$/;"	f
+zero_module	plug-and-play/ldm/modules/attention.py	/^def zero_module(module):$/;"	f
+zero_module	plug-and-play/ldm/modules/diffusionmodules/util.py	/^def zero_module(module):$/;"	f
