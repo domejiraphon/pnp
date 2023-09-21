@@ -275,3 +275,4 @@ def register_conv_control_efficient(model,
     conv_module = model.unet.up_blocks[1].resnets[1]
     conv_module.forward = conv_forward(conv_module)
     setattr(conv_module, 'injection_schedule', injection_schedule)
+    
