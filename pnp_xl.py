@@ -55,7 +55,7 @@ logger.add(
     format=f"{green_color_start}{{message}}{green_color_end}",
     level="INFO",
 )
-
+_EPS = 1e-12
 parser = argparse.ArgumentParser()
 parser.add_argument('--prompt', type=str, default="leaning tower of pisa on moon")
 parser.add_argument('--attn_layer', type=str, default="block1-attn2-trans1")
@@ -153,20 +153,22 @@ class StableDiffusion:
             torch.float16 if self.cfg.half_precision_weights else torch.float32
         )
         
-        self.device = torch.device("cuda")
         self.pipe = StableDiffusionXLPipeline.from_pretrained(
                 self.cfg.pretrained_model_name_or_path,
                 torch_dtype=self.weights_dtype, 
             ).to(self.device)
        
-        self.self_attn_map_t = []
-        self.deformed_self_attn_map_t = []
-
-        self.cross_attn_map_t = []
-        self.deformed_cross_attn_map_t = []
-
-        self.feature_maps_t = []
-        self.deformed_feature_maps_t = []
+       
+        attributes = [
+            "self_attn_map_t", 
+            "deformed_self_attn_map_t",
+            "cross_attn_map_t", 
+            "deformed_cross_attn_map_t",
+            "feature_maps_t", 
+            "deformed_feature_maps_t"
+        ]
+        for attr in attributes:
+            setattr(self, attr, [])
         self.np_to_torch = transforms.Compose([transforms.ToTensor()])
 
     @property
@@ -344,8 +346,8 @@ class StableDiffusion:
         self.register_attention(handles, targets)
         self.register_conv(handles, targets)
         if args.deformed:
-            deformer = MeshDeformator(64, 
-                                      64)
+            deformer = MeshDeformator(32, 
+                                      32)
             deformer.find_weights(handles, targets)
             self.coords = deformer.find_deformed_coords()
         for i, t in enumerate(tqdm(timesteps)):
@@ -378,7 +380,14 @@ class StableDiffusion:
 
             # compute the previous noisy sample x_t -> x_t-1
             latents = self.scheduler.step(noise_pred, t, latents, **extra_step_kwargs, return_dict=False)[0]
+            # is_deformed = t in self.deformed_at_t
+            # if is_deformed:
+            #     out = self.vae.decode(latents / self.vae.config.scaling_factor, return_dict=False)[0]
+            #     out = (out / 2 + 0.5).clamp(0, 1).float()
             
+            #     out = out.permute([0, 2, 3, 1]).detach().cpu().numpy()
+            #     plt.imsave("./cu2.jpg", out[0])
+            #     exit()
             
         img = self.vae.decode(latents / self.vae.config.scaling_factor, return_dict=False)[0]
        
@@ -386,18 +395,10 @@ class StableDiffusion:
 
         
 
-        grid_self_attn = self.concatenate_grids(
-            self.create_grid(self.self_attn_map_t), 
-            self.create_grid(self.deformed_self_attn_map_t)
-        )
-        grid_feature_maps = self.concatenate_grids(
-            self.create_grid(self.feature_maps_t), 
-            self.create_grid(self.deformed_feature_maps_t)
-        )
-        grid_cross_attn = self.concatenate_grids(
-            self.create_grid(self.cross_attn_map_t), 
-            self.create_grid(self.deformed_cross_attn_map_t)
-        )
+        grid_self_attn = self._generate_grid(self.self_attn_map_t, self.deformed_self_attn_map_t)
+        grid_feature_maps = self._generate_grid(self.feature_maps_t, self.deformed_feature_maps_t)
+        grid_cross_attn = self._generate_grid(self.cross_attn_map_t, self.deformed_cross_attn_map_t)
+
         return {
             "img": img,
             "self_attn_map_t": grid_self_attn,
@@ -490,13 +491,16 @@ class StableDiffusion:
                     
 
                 is_deformed = args.deformed and module.t in self.deformed_at_t
+                
                 if is_deformed:
                     logger.info("Deform self attention maps")
                     dim = int(sqrt(sim.shape[1]))
 
-                    reshaped_sim = rearrange(sim, 'b (h w) d -> b h w d', h=dim, w=dim).permute([0, 3, 1, 2])
+                    reshaped_sim = rearrange(sim, 'b (h w) d -> b d h w', h=dim, w=dim)
 
                     # Transform the reshaped attention map based on the coordinates
+                    #self.coords = torch.ones_like(self.coords)
+                
                     sim_deformed = F.grid_sample(
                         reshaped_sim, 
                         self.coords.repeat([reshaped_sim.shape[0], 1, 1, 1]), 
@@ -505,7 +509,7 @@ class StableDiffusion:
                     )
                     
                     self_attn_map = rearrange(sim_deformed, 'b d h w-> b (h w) d').softmax(dim=-1)
-
+                    
                 if module.t in self.visualization_at_t:
                     deformed_attn_map = process_and_visualize(self_attn_map)
                     target_list = self.deformed_cross_attn_map_t if is_cross else self.deformed_self_attn_map_t
@@ -519,14 +523,20 @@ class StableDiffusion:
                     sim.masked_fill_(~attention_mask, max_neg_value)
 
                 out = torch.einsum("b i j, b j d -> b i d", self_attn_map, v)
-                
+                # if module.t in self.visualization_at_t[-1:]:
+                #     m = process_and_visualize(out)
+                #     print(m.shape)
+                #     m = m.detach().permute([1, 2, 0]).cpu().numpy()
+                #     plt.imsave("./test.jpg", m)
+                #     exit()
                 out = module.batch_to_head_dim(out)
-                
-                return to_out(out)  
+                out = to_out(out)
+                #out = - 1 * torch.ones_like(out)
+                #out = torch.zeros_like(out)
+                return out
 
             return forward
-        
-        
+       
         numbers = [int(i) for i in re.findall(r'\d+', args.attn_layer)]
         up_blocks_dict = {numbers[0]: {numbers[1]: [numbers[2]]}}
         
@@ -535,10 +545,10 @@ class StableDiffusion:
         setattr(module, 'handles', handles)
         setattr(module, 'targets', targets)
 
-        module = self.unet.up_blocks[numbers[0]].attentions[numbers[1]].transformer_blocks[numbers[2]].attn2
-        module.forward = sa_forward(module)
-        setattr(module, 'handles', handles)
-        setattr(module, 'targets', targets)
+        # module = self.unet.up_blocks[numbers[0]].attentions[numbers[1]].transformer_blocks[numbers[2]].attn2
+        # module.forward = sa_forward(module)
+        # setattr(module, 'handles', handles)
+        # setattr(module, 'targets', targets)
 
     def visualize(self, feature_maps):
         
@@ -548,7 +558,7 @@ class StableDiffusion:
         
         min_vals = feature_maps_pca.min(axis=(0, 1))
         max_vals = feature_maps_pca.max(axis=(0, 1))
-        normalized_maps = (feature_maps_pca - min_vals) / (max_vals - min_vals)
+        normalized_maps = (feature_maps_pca - min_vals) / (max_vals - min_vals + _EPS)
         
         torch_maps = self.np_to_torch(np.clip(normalized_maps, 0., 1.0))
         return torch_maps
@@ -575,7 +585,6 @@ class StableDiffusion:
             io.imsave(output_path, img)
         logger.info(f"Images have been saved to {os.path.dirname(output_path)}")
 
-    
     def register_conv(self,
                     handles,
                     targets):
@@ -636,6 +645,7 @@ class StableDiffusion:
                     self.feature_maps_t.append(features_no_deformed)
 
                 is_deformed = args.deformed and module.t in self.deformed_at_t
+                is_deformed = False
                 if is_deformed:
                     logger.info("Deform feature maps")
 
@@ -674,6 +684,12 @@ class StableDiffusion:
     
     def create_grid(self, tensors):
         return None if not tensors else vutils.make_grid(torch.stack(tensors, 0), nrow=len(tensors), padding=0)
+
+    def _generate_grid(self, original, deformed):
+        return self.concatenate_grids(
+            self.create_grid(original),
+            self.create_grid(deformed)
+        )
 
 @logger.catch
 def main():
